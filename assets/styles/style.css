@@ -1,7 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@100&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 section.header{
     text-decoration: none;
@@ -75,11 +82,16 @@ nav ul li a{
 align-self: center;
 
 }
+
 .nav_button a{
     text-decoration: none;
     color: white;
 }
+.nav_btn:hover{
+    background-color: rgb(54, 54, 162);
+}
 .nav_btn{
+    margin-right: 2rem;
  padding: 5px;
  width: 7rem;
  height: 3rem;
