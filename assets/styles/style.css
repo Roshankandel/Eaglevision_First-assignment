@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section.header{
+    text-decoration: none;
+   background-image: url("../images/background1.jpg");
+
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed;
+   object-fit: cover;
+   width: 100%;
+   height: 90vh;
+}
+
+.top_info{
+    padding-right: 6rem;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(50, 48, 48);
+   color: white;
+  display: flex;
+  justify-content:flex-end;
+
+}
+.phone a{
+text-decoration: none;
+    display: inline-flex;
+    padding-right: 3rem;
+    color: white;
+}
+.phone i{
+    padding-right:10px;
+}
+.mail a{
+    text-decoration: none;
+    display: inline-flex;
+    color: white;
+}
+.mail i{
+    padding-right:10px;
+}
+
+
+nav{
+   padding-top: 1rem;
+padding-left: 1rem;
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    justify-content: space-between;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    padding-left: 1.5rem;
+    padding-top:20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+.nav_button{
+align-self: center;
+
+}
+.nav_button a{
+    text-decoration: none;
+    color: white;
+}
+.nav_btn{
+ padding: 5px;
+ width: 7rem;
+ height: 3rem;
+ color: white;
+ background-color: rgb(62, 62, 204);
+ border-radius: 5px;
+ border: none;
+}
+.logo img{
+    margin-top: 1rem;
+}
+.header_body{
+    color: white;
+ 
+    margin-left: 5rem;
+
+}
+.Heading{
+    padding-top:5rem;
+   font-size: 1.7rem;
+   font-weight: bold;
+    margin: auto;
+}
+.info_text{
+padding: 2rem 0;
+font-size: 1.3rem;
+}
+
+
+.header_btn1{
+    height: 3rem;
+    width: 10rem;
+    padding: 5px;
+    margin:auto;
+    background-color: rgb(62, 62, 204);
+    border: none;
+    color: white;
+    font-size: .9rem;
+}
+.header_btn1:hover{
+    background-color: transparent;
+    border: 2px solid  rgb(62, 62, 204);
+    transition: 0.5s;
+}
+.header_btn2{
+    height: 3rem;
+    width: 10rem;
+    padding: 5px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: .9rem;
+
+}
+.header_btn2:hover{
+    background-color:  rgb(62, 62, 204);
+    border: none;
+    transition: 0.5s;
+
+}
+
+.info_text{
+ margin-right: 40%;
+}
+
+
