@@ -1,160 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&family=Ubuntu:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@100&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --color-1: #2f3240;
 }
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+  background-color: #e8eef3;
+  font-family: "Ubuntu", sans-serif;
 }
-section.header{
-    text-decoration: none;
-   background-image: url("../images/background1.jpg");
-
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center center;
-   background-attachment: fixed;
-   object-fit: cover;
-   width: 100%;
-   height: 90vh;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.top_info{
-    padding-right: 6rem;
-    align-items: center;
-    height: 4rem;
-    width: 100%;
-    background-color: rgb(50, 48, 48);
-   color: white;
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* .nav_container{
+	max-width: 100%;
+	margin:auto;
+} */
+.nav_row {
+  margin-left: 3rem;
+  margin-right: 10rem;
   display: flex;
-  justify-content:flex-end;
-
-}
-.phone a{
-text-decoration: none;
-    display: inline-flex;
-    padding-right: 3rem;
-    color: white;
-}
-.phone i{
-    padding-right:10px;
-}
-.mail a{
-    text-decoration: none;
-    display: inline-flex;
-    color: white;
-}
-.mail i{
-    padding-right:10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
+/*header*/
+.header {
+  /* background-color: var(--color-1); */
+  padding: 12px 0;
+  line-height: 1.5;
+}
 
-nav{
-   padding-top: 1rem;
-padding-left: 1rem;
+.header .logo,
+.header .nav {
+  display: flex;
+  /* justify-content: flex-end; */
+  padding: 0 15px;
+}
+.header .logo a {
+  font-size: 30px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.header .nav ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+.header .nav ul li a {
+  display: block;
+
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding: 10px 0;
+  transition: all 0.5s ease;
+}
+.header .nav ul li a.active,
+.header .nav ul li a:hover {
+  color: rgb(62, 62, 204);
+}
+.nav-toggler {
+  height: 34px;
+  width: 44px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  display: none;
+  margin-right: 15px;
+}
+.nav-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+.nav-toggler span {
+  height: 2px;
+  width: 20px;
+  background-color: var(--color-1);
+  display: block;
+  margin: auto;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-toggler.active span {
+  background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-1);
+  transition: all 0.3s ease;
+}
+.nav-toggler span::before {
+  transform: translateY(-6px);
+}
+.nav-toggler.active span::before {
+  transform: rotate(45deg);
+}
+.nav-toggler span::after {
+  transform: translateY(6px);
+}
+.nav-toggler.active span::after {
+  transform: rotate(135deg);
+}
+
+/* changed by roshan */
+
+section.main {
+  text-decoration: none;
+  background-image: url("../images/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  object-fit: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.top_info {
+  padding-right: 12.7rem;
+  align-items: center;
+  height: 3.5rem;
+  width: 100%;
+  font-size: 0.9rem;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.phone a {
+  text-decoration: none;
+  display: inline-flex;
+  padding-right: 3rem;
+  color: white;
+}
+.phone i {
+  padding-right: 10px;
+}
+.mail a {
+  text-decoration: none;
+  display: inline-flex;
+  color: white;
+}
+.mail i {
+  padding-right: 10px;
+}
+
+/* dropdown */
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #010834;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+/*  */
+
+.nav_button {
+  align-self: center;
+}
+
+.nav_button a {
+  text-decoration: none;
+  color: white;
+}
+.nav_btn:hover {
+  background-color: rgb(54, 54, 162);
+}
+.nav_btn {
+  font-size: 1rem;
+  cursor: pointer;
+
+  padding: 5px;
+  width: 8rem;
+  height: 3rem;
+  color: white;
+  background-color: rgb(62, 62, 204);
+  border-radius: 5px;
+  border: none;
+}
+
+.header_body {
+  color: white;
+  margin-left: 6.5rem;
+}
+.main_heading {
+  padding-top: 5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: auto;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.info_text {
+  padding: 2rem 0;
+  font-size: 1.3rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header_btn1 {
+  height: 3rem;
+  width: 10rem;
+  padding: 5px;
+  margin: auto;
+  background-color: rgb(62, 62, 204);
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+.header_btn1:hover {
+  background-color: transparent;
+  border: 2px solid rgb(62, 62, 204);
+  transition: 0.5s;
+}
+.header_btn2 {
+  height: 3rem;
+  width: 10rem;
+  padding: 5px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+.header_btn2:hover {
+  background-color: rgb(62, 62, 204);
+  border: none;
+  transition: 0.5s;
+}
+
+.info_text {
+  margin-right: 40%;
+}
+/* Styles for section services */
+.services_main_container {
+  height: fit-content;
+  padding: 5rem 7rem;
+
+  background-color: #010834;
+  color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 5%;
+}
+.services_intro_title h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.services_intro_description {
+  padding: 2rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.services_btn1 {
+  height: 3rem;
+  width: 15rem;
+  padding: 5px;
+  margin: auto;
+  background-color: rgb(62, 62, 204);
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+.services_btn1:hover {
+  background-color: transparent;
+  border: 2px solid rgb(62, 62, 204);
+  transition: 0.5s;
+}
+.services_btn2 {
+  height: 3rem;
+  width: 10rem;
+  padding: 5px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+.services_btn2:hover {
+  background-color: rgb(62, 62, 204);
+  border: none;
+  transition: 0.5s;
+}
+.services_item {
+  text-align: center;
+}
+.grid_container {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.services_icon {
+  text-align: center;
+}
+.services_icon i {
+  font-size: 3rem;
+  color: rgb(62, 62, 204);
+  padding: 1rem 0;
+}
+.services_title {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+.services_description p {
+  font-family: "Ubuntu", sans-serif;
+}
+/* for responsiveness */
+
+@media (max-width: 1200px) {
+  .nav_row {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .main_heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .services_main_container {
+    padding: 3rem 2rem;
+  }
+  .services_intro_title h1 {
+    font-size: 2rem;
+  }
+  .services_intro_description {
+    padding: 1.5rem 0;
+  }
+  .grid_container {
+    gap: 1.5rem;
+  }
+
+  .services_icon i {
+    font-size: 2.5rem;
+  }
+  .services_title {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-toggler {
+    display: block;
+  }
+  .nav_row {
     display: flex;
-    height: 5rem;
-    width: 100%;
     justify-content: space-between;
-    color: white;
-}
+    margin: 0;
+  }
+  .header .nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    justify-content: center;
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    /* background-color: #010834; */
+  }
+  .nav_btn {
+    display: none;
+  }
+  .header .nav.open {
+    visibility: visible;
+  }
+  .header .nav ul {
+    justify-content: center;
+    /* padding:12px 15px 0;
+			margin-top: 12px; */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .header .nav ul li {
+    display: block;
+    margin: 0;
+  }
 
-nav ul{
-    display: flex;
-    list-style: none;
+  .header_body {
+    margin-left: auto;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .info_text {
+    text-align: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  .main_heading {
+    padding-top: 5rem;
+    font-size: 2rem;
+  }
+  .services_main_container {
+    grid-template-columns: auto;
+  }
+  .part_intro {
+    padding: 2rem 5rem;
+  }
+  .part_services {
+    padding: 2rem 5rem;
+  }
+  .services_intro_description {
+    font-size: 1rem;
+  }
+  .services_intro_title {
+    font-size: 1.5rem;
+  }
 }
-nav ul li{
-    padding-left: 1.5rem;
-    padding-top:20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-
-}
-.nav_button{
-align-self: center;
-
-}
-
-.nav_button a{
-    text-decoration: none;
-    color: white;
-}
-.nav_btn:hover{
-    background-color: rgb(54, 54, 162);
-}
-.nav_btn{
-    margin-right: 2rem;
- padding: 5px;
- width: 7rem;
- height: 3rem;
- color: white;
- background-color: rgb(62, 62, 204);
- border-radius: 5px;
- border: none;
-}
-.logo img{
-    margin-top: 1rem;
-}
-.header_body{
-    color: white;
- 
-    margin-left: 5rem;
-
-}
-.Heading{
-    padding-top:5rem;
-   font-size: 1.7rem;
-   font-weight: bold;
-    margin: auto;
-}
-.info_text{
-padding: 2rem 0;
-font-size: 1.3rem;
-}
-
-
-.header_btn1{
-    height: 3rem;
-    width: 10rem;
-    padding: 5px;
-    margin:auto;
-    background-color: rgb(62, 62, 204);
-    border: none;
-    color: white;
-    font-size: .9rem;
-}
-.header_btn1:hover{
-    background-color: transparent;
-    border: 2px solid  rgb(62, 62, 204);
-    transition: 0.5s;
-}
-.header_btn2{
-    height: 3rem;
-    width: 10rem;
-    padding: 5px;
-    border: 2px solid white;
-    background-color: transparent;
-    color: white;
-    font-size: .9rem;
-
-}
-.header_btn2:hover{
-    background-color:  rgb(62, 62, 204);
-    border: none;
-    transition: 0.5s;
-
-}
-
-.info_text{
- margin-right: 40%;
-}
-
-
