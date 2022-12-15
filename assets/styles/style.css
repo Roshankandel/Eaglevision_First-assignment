@@ -181,6 +181,8 @@ section.main {
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
+  align-items: center;
+  text-align: center;
   position: absolute;
   background-color: #010834;
   min-width: 160px;
