@@ -18,6 +18,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700;900&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet" />
+
+    <!-- Box-icons -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
 </head>
 
 <body>
@@ -198,6 +204,7 @@
             <!--grid item 2 -->
             <div class="grid_item">
                 <img src="./assets/images/work_img2.svg" alt="" />
+                
                 <!-- <hr> -->
                 <div class="grid_item_title">Design & concept</div>
                 <div class="grid_item_description">
@@ -301,12 +308,26 @@
         <div class="customer_case_grid_container">
             <div class="customer_case_grid_item">
                 <img src="./assets/images/comp_img1.jpg" alt="">
+                <div class="overlay">
+                    <p>Homepages</p>
+
+                    <span>
+                        <h3>Baras.se</h3><i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
             </div>
 
             <!-- grid item 2-->
 
             <div class="customer_case_grid_item">
                 <img src="./assets/images/comp_img2.jpg" alt="">
+                <div class="overlay">
+                    <p>Homepages</p>
+
+                    <span>
+                        <h3>The casino magnet</h3><i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
             </div>
 
 
@@ -314,6 +335,13 @@
 
             <div class="customer_case_grid_item">
                 <img src="./assets/images/comp_img3.jpg" alt="">
+                <div class="overlay">
+                    <p>Homepages</p>
+
+                    <span>
+                        <h3>The Wizard Froge</h3><i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
             </div>
 
 
@@ -322,21 +350,160 @@
 
             <div class="customer_case_grid_item">
                 <img src="./assets/images/comp_img4.jpg" alt="">
+                <div class="overlay">
+                    <p>Homepages</p>
+
+                    <span>
+                        <h3>michael & the Hairdressers</h3><i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
 
             </div>
             <!-- grid item 5-->
 
             <div class="customer_case_grid_item">
                 <img src="./assets/images/comp_img1.jpg" alt="">
+                <div class="overlay">
+                    <p>Homepages</p>
+
+                    <span>
+                        <h3>Spa support</h3><i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
             </div>
 
             <!-- grid item 6-->
 
             <div class="customer_case_grid_item">
                 <img src="./assets/images/comp_img2.jpg" alt="">
+                <div class="overlay">
+                    <p>Homepages</p>
+                    <span>
+                        <h3>Solskydda.se</h3>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
             </div>
         </div>
 
+    </section>
+
+
+    <section class="partners">
+        <div class="partners_containers">
+            <div class="partners_img">
+                <img src="./assets/images/partner1.webp" alt="" style="height: auto; width: 170px;">
+            </div>
+            <div class="partners_img">
+                <img src="./assets/images/partner2.webp" alt="" style="height: auto; width: 170px;">
+            </div>
+            <div class="partners_img">
+                <img src="./assets/images/partner3.webp" alt="" style="height: auto; width: 120px;">
+            </div>
+            <div class="partners_img">
+                <img src="./assets/images/partner4.webp" alt="" style="height: auto; width: 120px;">
+            </div>
+            <div class="partners_img">
+                <img src="./assets/images/partner5.webp" alt="" style="height: auto; width: 150px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact_container">
+            <h3>The professional web agency for growth companies</h3>
+            <div class="contact_description">
+                <p>We have many years of experience in web design and have completed numerous projects where we help
+                    companies
+                    create attractive and business-useful websites while increasing their digital growth.
+                    We can help you through the entire process - from grain to loaf.</p>
+                <p>Do you also want to have an increased digital presence, be more visible online and
+                    create improved profitability that also strengthens your brand?
+                    Then you should contact one of our skilled experts!</p>
+                <p>We are a reliable web agency in Stockholm that would love to help you maximize your digital business
+                    and sales! </p>
+                <p>Fill in your contact details in the form below and we'll get back to you as soon as we can!</p>
+            </div>
+
+            <div class="contact_form">
+                <p>Do you want help with your next web project?</p>
+                <form action="">
+                    <select id="services" name="Choose Service">
+                        <option value="services">choose services</option>
+                        <option value="saab">Normal Website</option>
+                        <option value="fiat">SEO</option>
+                        <option value="audi">E-commerce</option>
+                        <option value="saab">Ux-Design</option>
+                        <option value="fiat">Google Ads</option>
+                        <option value="audi">Web Analysis</option>
+                        <option value="fiat">landing pages</option>
+                        <option value="audi">Conversation Optimization</option>
+                        <option value="fiat">marketing Automation</option>
+                        <option value="audi">Miscellaneous</option>
+                    </select>
+
+                    <div class="flex_containers"><input type="email" placeholder="Your e-mail">
+                        <input type="text" placeholder="Your phone number">
+                    </div>
+
+                    <textarea name="message" id="" cols="30" rows="10"
+                        placeholder="Describe your matter/assignment"></textarea>
+                    <br>
+
+                    <input type="checkbox" id="check" name="privacy_policy">
+                    <label for="check">Accept ours <a href="#">Privacy policy</a></label>
+                    <button class="form_button">Send Contact Details</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <footer>
+            <div class="footer_container">
+                <div class="footer_item">
+                    <h4>Eagle Vision</h4>
+                    <ul>
+                        <li><i class="fa-regular fa-circle-check"></i>Web development in Wordpress since 2012</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Over 100 completed projects</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Experts in E-commerce for WooCommerce</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Long-term cooperation</li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <h4>Surf around</h4>
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">WordPress</a></li>
+                        <li><a href="#">WooCommerce E-commerce</a></li>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">How we work</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Customer case</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class='bx bx-home-alt'></i>EV Media AB
+                            Höganäsvägen 8, 121 53 Johanneshov</li>
+                        <li><a href="tel:+91123-456-7890"><i class='bx bx-phone'></i>+46 731 47 21 22 </a>
+                        </li>
+                        <li><a href="mailto:info@eaglevisionit.se"><i class="fa-solid fa-envelope"></i>
+                                info@eaglevisionit.se </a>
+
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <p>copyright 2022 &COPY; All right reserved</p>
+        </footer>
     </section>
     <script src="./assets/script/script.js"></script>
 </body>
