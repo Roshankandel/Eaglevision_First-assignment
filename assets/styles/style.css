@@ -225,7 +225,6 @@ section.main {
 .nav_btn {
   font-size: 1rem;
   cursor: pointer;
-
   padding: 5px;
   width: 8rem;
   height: 3rem;
@@ -268,6 +267,7 @@ section.main {
   transition: 0.5s;
 }
 .header_btn2 {
+  margin-left: 10px;
   height: 3rem;
   width: 10rem;
   padding: 5px;
@@ -330,6 +330,7 @@ section.main {
   background-color: transparent;
   color: white;
   font-size: 1rem;
+  margin-left: 10px;
 }
 .services_btn2:hover {
   background-color: rgb(62, 62, 204);
@@ -388,7 +389,10 @@ section.how_we_work {
   grid-template-columns: auto auto auto auto auto;
   gap: 4rem;
   text-align: center;
-  overflow: visible;
+  overflow: scroll;
+}
+.how_we_work_grid_container::-webkit-scrollbar {
+  display: none;
 }
 .grid_item img {
   margin-top: 3.5rem;
@@ -421,17 +425,17 @@ section.how_we_work {
 }
 
 /* styles for stockholm section */
-.stockholm {
-  background-color: #f9f9f9;
-}
+
 .stockholm_container {
+  background-color: #f9f9f9;
   display: grid;
   grid-template-columns: 45% 45%;
   gap: 10%;
-  padding: 4rem 7rem 4rem 4rem;
+  padding: 4rem 7rem;
 }
 .left_banner {
-  padding-left: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .left_banner img {
   height: auto;
@@ -496,6 +500,7 @@ section.customer_case {
 }
 .customer_case_description {
   padding-left: 9rem;
+  font-size: 2rem;
   padding-top: 5rem;
   color: #010834;
   width: 50rem;
@@ -509,27 +514,30 @@ section.customer_case {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 .customer_case_description span a {
+  font-size: 1.2rem;
   text-decoration: none;
   color: #010834;
   border-bottom: 2px solid #010834;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .customer_case_grid_container {
   color: #010834;
   margin-top: 3rem;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
 }
 .customer_case_grid_item img {
-  height: fit-content;
   width: 100%;
+  height: 100%;
 }
 .customer_case_grid_item {
   background-color: #010834;
+
   position: relative;
 }
 
@@ -550,14 +558,14 @@ section.customer_case {
   transition: visibility 0.3s, opacity 0.3s linear; */
 }
 .overlay p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
-.overlay span {
+.overlay span h3 {
   display: flex;
   justify-content: space-between;
   font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 .overlay:hover {
   cursor: pointer;
@@ -585,18 +593,43 @@ section.customer_case {
 }
 .partners_containers {
   display: flex;
+  gap: 3rem;
   padding: 2rem 5rem;
   justify-content: space-around;
+  overflow: scroll;
   margin: auto;
   align-items: center;
   align-self: center;
-
-  /* overflow: scroll; */
+  width: 100%;
+}
+.partners_containers::-webkit-scrollbar {
+  display: none;
+}
+.partners_img:nth-child(1) img {
+  padding-left: 2rem;
+  height: auto;
+  width: 170px;
+}
+.partners_img:nth-child(2) img {
+  height: auto;
+  width: 170px;
+}
+.partners_img:nth-child(3) img {
+  height: auto;
+  width: 120px;
+}
+.partners_img:nth-child(4) img {
+  height: auto;
+  width: 120px;
+}
+.partners_img:nth-child(5) img {
+  height: auto;
+  width: 150px;
 }
 
 /* styles for contact Section */
 .contact {
-  padding: 4rem 3rem;
+  padding: 4rem 2rem;
   color: #010834;
   background-color: white;
   text-align: center;
@@ -613,7 +646,7 @@ section.customer_case {
   font-size: 16px;
   padding-top: 20px;
   text-align: center;
-  margin: 0.5rem 20rem;
+  margin: 0.5rem 15rem;
   font-weight: 400;
   font-family: "Ubuntu", sans-serif;
 }
@@ -622,8 +655,7 @@ section.customer_case {
 }
 .contact_form {
   justify-content: center;
-
-  padding: 3rem 2rem;
+  padding: 3rem 0.5rem;
   display: block;
   background-color: #010834;
   margin: 1rem 18rem;
@@ -673,19 +705,23 @@ section.customer_case {
 .contact_form form textarea::placeholder {
   font-size: 1rem;
   color: #010834;
-  font-weight: 400;
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .contact_form form input[type="checkbox"] {
   height: 20px;
   width: 20px;
-  margin-left: 3rem;
   margin-top: 10px;
+}
+.policy_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6.5rem;
 }
 
 .form_button {
-  float: right;
-  margin-right: 9.4rem;
   padding: 0.6rem;
   background-color: #0070d1;
   color: white;
@@ -706,10 +742,7 @@ section.customer_case {
   background-color: #010834;
   color: white;
 }
-.footer_item ul li a {
-  text-decoration: none;
-  color: white;
-}
+
 .footer_item ul li {
   padding-bottom: 1rem;
   font-weight: 200;
@@ -721,21 +754,37 @@ section.customer_case {
   font-weight: 100;
 }
 .footer_item ul li a {
+  text-decoration: none;
+  color: white;
   font-weight: 400;
   font-size: 1rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
+  margin-bottom: 1rem;
+}
+.footer_item ul li a:hover {
+  color: #0070d1;
+
+  transition: 0.2s ease-in-out;
 }
 
 .footer_container {
   padding: 3.5rem 8rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-content: center;
+  margin-left: 2rem;
   justify-content: space-between;
 }
+
 .footer_item h4 {
   font-size: 1.3rem;
   font-weight: 600;
   font-family: "Montserrat Alternates", sans-serif;
   margin-bottom: 2rem;
+}
+.footer_item {
+  flex-grow: 1;
 }
 /* .footer_item:nth-child(1) {
   margin-right: 20rem;
@@ -801,9 +850,25 @@ footer p {
     padding: 3rem 2rem;
     justify-content: flex-start;
   }
+  .partners_img:nth-child(1) img {
+    padding-left: 2rem;
+    width: 150px;
+  }
+  .partners_img:nth-child(2) img {
+    width: 150px;
+  }
+  .partners_img:nth-child(3) img {
+    width: 100px;
+  }
+  .partners_img:nth-child(4) img {
+    width: 100px;
+  }
+  .partners_img:nth-child(5) img {
+    width: 130px;
+  }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .nav-toggler {
     display: block;
   }
@@ -870,11 +935,22 @@ footer p {
   .services_intro_title {
     font-size: 1.5rem;
   }
-  /* .how_we_work_grid_container {
-    grid-template-columns: auto auto auto;
-    gap: 2rem;
-    text-align: center;
-  } */
+  .customer_case_grid_container {
+    padding: 1rem 5rem;
+    grid-template-columns: repeat(6, 1fr);
+    height: auto;
+    overflow: scroll;
+    width: 100%;
+  }
+  .customer_case_grid_container::-webkit-scrollbar {
+    display: none;
+  }
+  .customer_case_grid_item img {
+    width: 25rem;
+    height: 100%;
+    overflow: scroll;
+  }
+
   section.how_we_work {
     padding: 3rem 4rem;
     color: #010834;
@@ -885,10 +961,126 @@ footer p {
   }
   .stockholm_container {
     grid-template-columns: auto;
+    height: fit-content;
   }
-  /* .footer_container {
+
+  .overlay {
+    padding: 1rem 1rem;
+  }
+  .overlay p {
+    font-size: 0.6rem;
+  }
+  .overlay span h3 {
+    font-size: 0.7rem;
+  }
+  .footer_container {
     padding: 3rem 2rem;
     justify-content: center;
     flex-direction: column;
-  } */
+  }
+  .partners_containers {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  .partners_img:nth-child(1) img {
+    width: 150px;
+  }
+  .partners_img:nth-child(2) img {
+    width: 130px;
+  }
+  .partners_img:nth-child(3) img {
+    width: 80px;
+  }
+  .partners_img:nth-child(4) img {
+    width: 80px;
+  }
+  .partners_img:nth-child(5) img {
+    width: 100px;
+  }
+  .customer_case_description {
+    padding-left: 5rem;
+    width: fit-content;
+  }
+  .customer_case_description h3 {
+    font-size: 1.5rem;
+  }
+  .customer_case_description span a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners_img:nth-child(1) img {
+    margin-left: 1rem;
+  }
+  .contact_form form input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+  }
+  .customer_case_description {
+    padding-left: 3rem;
+    padding-right: 1rem;
+  }
+  .customer_case_grid_container {
+    padding: 1rem 3rem;
+  }
+
+  .stockholm_title h4 {
+    font-size: 1.8rem;
+  }
+  .stockholm_container {
+    padding: 2rem 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .contact_container h3 {
+    font-size: 1.7;
+  }
+  .contact_form {
+    margin: auto;
+  }
+
+  .contact_form form textarea {
+    width: 90%;
+  }
+
+  .contact_form form select {
+    width: 90%;
+  }
+
+  .contact_form form input:nth-child(2) {
+    width: 90%;
+  }
+  .contact_form form input:nth-child(1) {
+    width: 90%;
+  }
+
+  /* stockholm */
+  .left_banner {
+    padding-left: 2rem;
+  }
+  .stockholm_container {
+    padding: 1rem 1rem;
+  }
+  .stockholm_title h4 {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  /* stockholm */
+  .policy_container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .form_button {
+    padding: 0.6rem;
+    background-color: #0070d1;
+    color: white;
+    font-size: 1rem;
+  }
+  .contact_description {
+    margin: auto;
+  }
+  @media (max-width: 480px) {
+  }
 }
