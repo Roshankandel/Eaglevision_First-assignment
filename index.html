@@ -16,86 +16,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700;900&family=Ubuntu:wght@300&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@300&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Box-icons -->
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-
+    <script src="./assets/script/jquery-3.6.3.js"></script>
 </head>
 
 <body>
     <section class="main">
         <div class="top_info">
             <div class="phone">
-                <a href="#">
+                <a href="tel:+46 731 472 122">
                     <i class="fa-solid fa-phone"></i>
                     <p>+46 731 472 122</p>
                 </a>
             </div>
             <div class="mail">
-                <a href="">
+                <a href="mailto:info@eaglevisionit.se">
                     <i class="fa-solid fa-message"></i>
                     <p>info@eaglevisionit.se</p>
                 </a>
             </div>
         </div>
-        <header class="header">
-            <div class="nav_container">
+        <header class="header" id="home">
+            <div class="nav_container" id="mynav">
                 <div class="nav_row" id="nav">
                     <label class="logo">
-                        <img src="./assets/images/logo.svg" alt="" height="35px" width="auto" />
+                        <a href="#home"><img src="./assets/images/logo.svg" alt="" height="35px" width="auto" /></a>
+                        </a>
                     </label>
 
                     <button type="button" class="nav-toggler">
                         <span></span>
                     </button>
-                    <nav class="nav" id="mynav">
+                    <nav class="nav">
                         <ul>
                             <li>
                                 <div class="dropdown">
                                     <button class="dropbtn">
-                                        Dropdown
-                                        <i class="fa fa-caret-down"></i>
+                                        <a href="#">services <i class="fa fa-caret-down"></i></a>
                                     </button>
                                     <div class="dropdown-content">
-                                        <a href="#">Link 1</a>
-                                        <a href="#">Link 2</a>
-                                        <a href="#">Link 3</a>
+                                        <a href="#">Web Development</a>
+                                        <a href="#">WooCommerce</a>
+                                        <a href="#">SEO</a>
                                     </div>
                                 </div>
                             </li>
 
-                            <li><a href="#">WooCommerce E-handel</a></li>
-                            <li><a href="#">Hur vi jobbar</a></li>
-                            <li><a href="#">Kundcase</a></li>
-                            <li><a href="#">Om Oss</a></li>
+                            <li><a href="#">WooCommerce E-commerce</a></li>
+                            <li><a href="#">How We Work</a></li>
+                            <li><a href="#">Customer Case</a></li>
+                            <li><a href="#">About Us</a></li>
                         </ul>
                     </nav>
 
                     <div class="nav_button">
-                        <button class="nav_btn">Kontakta oss</button>
+                        <a href="#" class="nav_btn">Contact Us</a>
                     </div>
+
+
                 </div>
             </div>
 
             <div class="header_body">
                 <div class="main_heading">
-                    <h1>Webbyrå i Stockholm</h1>
+                    <h1>Web agency in Stockholm</h1>
                 </div>
                 <div class="info_text">
                     <p>
-                        Eagle Vision IT är en fullservice webbyrå i Stockholm. Genom
-                        långsiktigt engagemang vill vi hjälpa er att maximera er affär,
-                        skapa tillväxt och bygga smarta och kreativa lösningar för er!
+                        Eagle Vision IT is a full-service web agency in Stockholm.
+                        <br>
+                        Through long-term commitment, we want to help you maximize your business,
+                        create growth and build smart and creative solutions for you!
                     </p>
                 </div>
-                <div class="buttons">
-                    <button class="header_btn1">Hur jobber vi?</button>
-                    <button class="header_btn2">Våra tjänster</button>
+                <div class="header_buttons">
+
+
+                    <a href="#" class="header_btn1">How do we Work?</a>
+                    <a href="#" class="header_btn2">Our Services</a>
                 </div>
+            </div>
             </div>
         </header>
     </section>
@@ -114,8 +120,8 @@
                         Since 2012, we have worked on hundreds of different projects and
                         we offer a variety of services to our clients. Among other things,
                         we can offer several digital services such as professional web
-                        design, UI / UX, web development , copywriting, web analyzes and
-                        strategies, marketing automation as well as SEO and SEM.
+                        design, UI / UX,<span><a href="#">web development</a></span> , copywriting, web analyzes and
+                        strategies, marketing automation as well as <span><a href="#">SEO</a></span> and SEM.
                     </p>
                     <br />
                     <p>
@@ -125,14 +131,15 @@
                     </p>
                 </div>
                 <div class="services_intro_button">
-                    <button class="services_btn1">See our customer cases</button>
-                    <button class="services_btn2">see all services</button>
+                    <a href="#" class="services_btn1">See our customer cases</a>
+                    <a href="#" class="services_btn2">see all services</a>
                 </div>
             </div>
             <div class="part_services grid_container">
                 <div class="services_item">
                     <div class="services_icon">
-                        <i class="fa-solid fa-code"></i>
+                        <!-- <i class="fa-solid fa-code"></i> -->
+                        <img src="./assets/images/services_img1.svg" alt="">
                     </div>
                     <div class="services_title">
                         <h3>Web development</h3>
@@ -144,7 +151,8 @@
                 <!-- service item 2 -->
                 <div class="services_item">
                     <div class="services_icon">
-                        <i class="fa-brands fa-figma"></i>
+                        <!-- <i class="fa-brands fa-figma"></i> -->
+                        <img src="./assets/images/services_img2.svg" alt="">
                     </div>
                     <div class="services_title">
                         <h3>UX & Design</h3>
@@ -156,7 +164,8 @@
                 <!-- service item 3 -->
                 <div class="services_item">
                     <div class="services_icon">
-                        <i class="fa-solid fa-chart-bar"></i>
+                        <!-- <i class="fa-solid fa-chart-bar"></i> -->
+                        <img src="./assets/images/services_img3.svg" alt="">
                     </div>
                     <div class="services_title">
                         <h3>Strategy & Analysis</h3>
@@ -170,7 +179,7 @@
                 <!-- service item 4 -->
                 <div class="services_item">
                     <div class="services_icon">
-                        <i class="fa-solid fa-truck-fast"></i>
+                        <img src="./assets/images/services_img4.svg" alt="">
                     </div>
                     <div class="services_title">
                         <h3>Digital Marketing</h3>

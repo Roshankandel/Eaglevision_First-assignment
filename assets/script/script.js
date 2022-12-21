@@ -11,4 +11,16 @@ function navToggle() {
     else {
         nav.removeAttribute("style");
     }
-} 
+}
+
+
+
+
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 0) {
+        $("#mynav").addClass("scrolled");
+    } else {
+        $("#mynav").removeClass("scrolled");
+    }
+});
