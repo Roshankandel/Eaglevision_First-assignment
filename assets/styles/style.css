@@ -10,6 +10,8 @@
   --primary-color: #0070d1;
   --font1: "Ubuntu", sans-serif;
   --font2: "Montserrat Alternates", sans-serif;
+  --mb-para-size: 0.85rem;
+  --p-font-weight: 400;
 }
 body {
   background-color: #e8eef3;
@@ -151,18 +153,17 @@ section.main {
   text-decoration: none;
   /* background-image: url("../images/background1.jpg"); */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-    url("../images/background1.jpg");
+    url("../images/background2.jfif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
   object-fit: cover;
   width: 100%;
   height: 90vh;
 }
 
 .top_info {
-  padding-right: 12rem;
+  padding-right: 10rem;
   align-items: center;
   height: 3rem;
   width: 100%;
@@ -237,6 +238,7 @@ section.main {
 /*  */
 .nav_button {
   align-self: center;
+  padding-left: 10rem;
 }
 
 .nav_btn {
@@ -254,9 +256,16 @@ section.main {
 }
 .header_body {
   color: white;
-  margin-left: 12rem;
-  margin-top: 7rem;
+  /* margin-left: 13rem;
+  margin-top: 7rem; */
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .main_heading {
   font-size: 2.5rem;
   font-weight: bold;
@@ -331,44 +340,17 @@ section.main {
   line-height: 1.6;
 }
 .services_intro_description span a {
-  color: #0070d1;
+  color: white;
   font-weight: 400;
+  border-bottom: 1px solid white;
+}
+.services_intro_description span a:hover {
   border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 .services_intro_button {
   margin-top: 1rem;
 }
-/* .services_btn1 {
-  height: 3rem;
-  width: 15rem;
-  padding: 5px;
-  margin: auto;
-  background-color: var(--primary-color);
-  border: none;
-  color: white;
-  font-size: 1rem;
-}
-.services_btn1:hover {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  transition: 0.5s;
-}
-.services_btn2 {
-  height: 3rem;
-  width: 10rem;
-  padding: 5px;
-  border: 2px solid white;
-  background-color: transparent;
-  color: white;
-  font-size: 1rem;
-  margin-left: 10px;
-}
-.services_btn2:hover {
-  background-color: var(--primary-color);
-  border: none;
-  transition: 0.5s;
-} */
-
 .services_btn1 {
   background-color: var(--primary-color);
   padding: 0.7rem 1rem;
@@ -499,8 +481,8 @@ section.how_we_work {
   background-color: #f9f9f9;
   display: grid;
   grid-template-columns: 45% 45%;
-  gap: 5%;
-  padding: 4rem 5rem;
+  gap: 10%;
+  padding: 5rem 4rem;
 }
 .left_banner {
   padding-left: 3rem;
@@ -508,21 +490,21 @@ section.how_we_work {
 }
 .left_banner img {
   height: auto;
-  width: 100%;
+  width: 115%;
 }
 .stockholm_title p {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: var(--p-font-weight);
 }
 .stockholm_title h4 {
   font-family: var(--font2);
   font-size: 2.2rem;
   font-weight: 800;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 .stockholm_intro {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
+  font-weight: var(--p-font-weight);
   margin-top: 1rem;
   color: #010834;
   font-weight: 300 !important;
@@ -535,7 +517,7 @@ section.how_we_work {
   text-decoration: none;
   color: #010834;
   border-bottom: 2px solid #010834;
-  font-weight: bold;
+  font-weight: 400;
 }
 .stockholm_intro p span a:hover {
   color: var(--primary-color);
@@ -623,8 +605,8 @@ section.customer_case {
   font-family: sans-serif;
   opacity: 0;
   visibility: hidden;
-  /* -webkit-transition: visibility 0.3s, opacity 0.3s linear;
-  transition: visibility 0.3s, opacity 0.3s linear; */
+  -webkit-transition: visibility 0.3s, opacity 0.3s linear;
+  transition: visibility 0.3s, opacity 0.3s linear;
 }
 .overlay p {
   font-size: 0.7rem;
@@ -657,16 +639,39 @@ section.customer_case {
   opacity: 1;
 }
 
+.customer_case_links ul {
+  display: flex;
+  margin-right: 5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 6.8rem;
+}
+.customer_case_links ul li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--font-color);
+  padding-left: 1rem;
+}
+.customer_case_links ul li a {
+  border-bottom: 2px solid var(--font-color);
+}
+.customer_case_links ul li:nth-child(7) {
+  /* justify-content: flex-end; */
+}
+.customer_case_links ul li a i {
+  font-size: 1rem;
+}
 /* styles for partners section */
 .partners {
-  margin-top: 5rem;
-  background-color: #010834;
+  padding-top: 0.6rem;
+  background-color: white;
   justify-content: center;
 }
 .partners_containers {
+  background-color: #010834;
   display: flex;
   gap: 3rem;
-  padding: 2rem 5rem;
+  padding: 3rem 5rem;
   justify-content: space-around;
   overflow: scroll;
   margin: auto;
@@ -719,7 +724,7 @@ section.customer_case {
   padding-top: 20px;
   text-align: center;
   margin: 0.5rem 15rem;
-  font-weight: 400;
+  font-weight: var(--p-font-weight);
   font-family: "Ubuntu", sans-serif;
 }
 .contact_description p {
@@ -896,6 +901,8 @@ footer p {
     gap: 1.5rem;
   }
 
+  /* stockholm */
+
   .service .services_title {
     font-size: 1rem;
     padding: 0.3rem 0;
@@ -995,7 +1002,7 @@ footer p {
     padding: 2rem 5rem;
   }
   .part_services {
-    padding: 2rem 5rem;
+    padding: 2rem 2.5rem;
   }
   .services_intro_description {
     font-size: 1rem;
@@ -1070,11 +1077,36 @@ footer p {
     padding-left: 5rem;
     width: fit-content;
   }
+  .customer_case_links ul {
+    margin-right: 2rem;
+    padding-left: 4rem;
+    margin: auto;
+  }
   .customer_case_description h3 {
     font-size: 1.5rem;
   }
   .customer_case_description span a {
     font-size: 1rem;
+  }
+
+  .left_banner img {
+    height: auto;
+    width: 30rem;
+  }
+
+  .stockholm_button {
+    padding-bottom: 3rem;
+  }
+
+  .how_we_work_grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3.5rem;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  .grid_item:before {
+    width: 50px;
   }
 }
 
@@ -1090,6 +1122,14 @@ footer p {
     padding-left: 3rem;
     padding-right: 1rem;
   }
+  .customer_case_links ul {
+    padding-left: 2rem;
+    margin: auto;
+    margin-right: 1rem;
+  }
+  .customer_case_links ul li a {
+    margin-top: 1rem;
+  }
   .customer_case_grid_container {
     padding: 1rem 3rem;
   }
@@ -1099,11 +1139,42 @@ footer p {
   }
   .stockholm_container {
     padding: 2rem 4rem;
+    height: max-content;
+  }
+  .left_banner img {
+    height: auto;
+    width: 20rem;
+  }
+  .stockholm_button {
+    padding-bottom: 5rem;
+  }
+
+  .how_we_work_grid_container {
+    grid-template-columns: auto auto auto auto auto;
+    gap: 2rem;
+    padding-left: 2rem;
+  }
+  .grid_item {
+    width: 10rem;
+  }
+  section.how_we_work {
+    padding: 1rem 1rem;
+  }
+  .grid_container {
+    gap: 2rem;
+    grid-template-columns: auto;
   }
 }
 @media (max-width: 600px) {
+  .customer_case_links ul {
+    justify-content: flex-start;
+    margin-left: 2rem;
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+
   .contact_container h3 {
-    font-size: 1.7;
+    font-size: 1.7rem;
   }
   .contact_form {
     margin: auto;
@@ -1143,6 +1214,86 @@ footer p {
   .contact_description {
     margin: auto;
   }
-  @media (max-width: 480px) {
+  .customer_case_grid_container {
+    padding: 1rem 3rem;
+  }
+  .customer_case_grid_container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .customer_case_links ul {
+    padding-left: 5px;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-right: 5px;
+  }
+  .stockholm_button {
+    padding-bottom: 8rem;
+    align-items: center;
+    text-align: center;
+  }
+  .stockholm_title p {
+    text-align: center;
+  }
+  .customer_case_grid_item img {
+    height: 100%;
+    width: 20rem;
+  }
+}
+@media (max-width: 480px) {
+  .customer_case_grid_item img {
+    height: 100%;
+    width: 15rem;
+  }
+  .grid_item_description {
+    font-size: var(--mb-para-size);
+  }
+  .how_we_work_title h5 {
+    font-size: 1.4rem;
+  }
+  .how_we_work_title p {
+    font-size: var(--mb-para-size);
+  }
+  .left_banner img {
+    height: auto;
+    width: 15rem;
+  }
+  .stockholm_container {
+    padding: auto auto;
+  }
+  .customer_case_grid_container {
+    padding: 1rem 0.5rem;
+  }
+  .customer_case_description {
+    margin: auto;
+    padding-left: 1rem;
+  }
+  .customer_case_links ul {
+    padding-left: 5px;
+  }
+  .contact_container h3 {
+    font-size: 1.4rem;
+  }
+  .contact {
+    padding: 2rem auto;
+  }
+  .contact_description p {
+    padding-bottom: auto;
+    font-size: var(--mb-para-size);
+  }
+  .customer_case_links ul {
+    margin-left: auto;
+  }
+  .customer_case_links ul li {
+    padding-left: auto;
+  }
+  .stockholm_title h4 {
+    font-size: 1.4rem;
+  }
+  .stockholm_intro p {
+    font-size: var(--mb-para-size);
+  }
+  .stockholm_button {
+    padding-bottom: 5rem;
   }
 }
