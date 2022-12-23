@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <section class="main">
+    <section class="main" id="top">
         <div class="top_info">
             <div class="phone">
                 <a href="tel:+46 731 472 122">
@@ -45,10 +45,15 @@
         <header class="header" id="home">
             <div class="nav_container" id="mynav">
                 <div class="nav_row" id="nav">
-                    <label class="logo">
-                        <a href="#home"><img src="./assets/images/logo.svg" alt="" height="35px" width="auto" /></a>
-                        </a>
-                    </label>
+                    <div class="logo">
+                        <span>
+                            <a href="#home"><img src="./assets/images/logo.svg" alt="" height="35px" width="auto" /></a>
+                            </a>
+                        </span>
+
+
+                    </div>
+
 
                     <button type="button" class="nav-toggler">
                         <span></span>
@@ -72,13 +77,12 @@
                             <li><a href="#">How We Work</a></li>
                             <li><a href="#">Customer Case</a></li>
                             <li><a href="#">About Us</a></li>
+
                         </ul>
                     </nav>
-
                     <div class="nav_button">
                         <a href="#" class="nav_btn">Contact Us</a>
                     </div>
-
 
                 </div>
             </div>
@@ -146,10 +150,11 @@
                         <!-- <i class="fa-solid fa-code"></i> -->
                         <img src="./assets/images/services_img1.svg" alt="">
                     </div>
-                    <div class="services_title">
-                        <h3>Web development</h3>
-                    </div>
+
+
+
                     <div class="services_description">
+                        <h3>Web development</h3>
                         <p>WordPress, E-commerece, WooCommerce,Integrations,etc</p>
                     </div>
                 </div>
@@ -159,10 +164,9 @@
                         <!-- <i class="fa-brands fa-figma"></i> -->
                         <img src="./assets/images/services_img2.svg" alt="">
                     </div>
-                    <div class="services_title">
-                        <h3>UX & Design</h3>
-                    </div>
+
                     <div class="services_description">
+                        <h3>UX & Design</h3>
                         <p>Mockups, Prototypes, conversion optimization, etc</p>
                     </div>
                 </div>
@@ -172,10 +176,9 @@
                         <!-- <i class="fa-solid fa-chart-bar"></i> -->
                         <img src="./assets/images/services_img3.svg" alt="">
                     </div>
-                    <div class="services_title">
-                        <h3>Strategy & Analysis</h3>
-                    </div>
+
                     <div class="services_description">
+                        <h3>Strategy & Analysis</h3>
                         <p>
                             Web analysis, Google Analytics, A/B testing, dashboards, etc.
                         </p>
@@ -186,10 +189,9 @@
                     <div class="services_icon">
                         <img src="./assets/images/services_img4.svg" alt="">
                     </div>
-                    <div class="services_title">
-                        <h3>Digital Marketing</h3>
-                    </div>
+
                     <div class="services_description">
+                        <h3>Digital Marketing</h3>
                         <p>SEO, SEM, Marketing, Automation, Landing pages, etc</p>
                     </div>
                 </div>
@@ -533,6 +535,14 @@
             </div>
             <p>copyright 2022 &COPY; All right reserved</p>
         </footer>
+
+
+        <!-- scroll to top button -->
+        <div class="scrollup">
+            <a href="#">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
+        </div>
     </section>
     <script src="./assets/script/script.js"></script>
 </body>

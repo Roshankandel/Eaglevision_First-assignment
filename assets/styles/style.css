@@ -11,7 +11,7 @@
   --font1: "Ubuntu", sans-serif;
   --font2: "Montserrat Alternates", sans-serif;
   --mb-para-size: 0.85rem;
-  --p-font-weight: 400;
+  --p-font-weight: 300;
 }
 body {
   background-color: #e8eef3;
@@ -31,9 +31,13 @@ a {
   margin-left: 3rem;
   margin-right: 10rem;
   display: flex;
+  flex: 1 2 1;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+}
+.nav_row > * {
+  flex: 1 2 1;
 }
 
 /*header*/
@@ -43,11 +47,13 @@ a {
   line-height: 1.5;
 }
 
-.header .logo,
-.header .nav {
+.header #nav {
   display: flex;
   /* justify-content: flex-end; */
   padding: 0 15px;
+}
+.header .logo {
+  float: left;
 }
 .header .logo a {
   padding-top: 10px;
@@ -152,7 +158,7 @@ a {
 section.main {
   text-decoration: none;
   /* background-image: url("../images/background1.jpg"); */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)),
     url("../images/background2.jfif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -169,7 +175,6 @@ section.main {
   width: 100%;
   font-size: 1rem;
   font-weight: 100;
-
   color: white;
   display: flex;
   justify-content: flex-end;
@@ -235,13 +240,9 @@ section.main {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-/*  */
-.nav_button {
-  align-self: center;
-  padding-left: 10rem;
-}
 
 .nav_btn {
+  margin-left: 5rem;
   background-color: var(--primary-color);
   padding: 0.7rem 1rem;
   /* text-decoration: none; */
@@ -256,32 +257,52 @@ section.main {
 }
 .header_body {
   color: white;
-  /* margin-left: 13rem;
-  margin-top: 7rem; */
-
+  z-index: 1;
+  margin-left: 13rem;
+  margin-top: 8rem;
+  /* width: 100%;
+  color: white;
+  margin-left: 13rem;
+  margin-top: 7rem;
+  text-align: justify;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
-.main_heading {
+.main_heading h1 {
+  min-width: fit-content;
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-family: var(--font2);
+
+  /* text-align: justify;
   font-size: 2.5rem;
   font-weight: bold;
   margin: auto;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif; */
 }
-.info_text {
-  margin-right: 40%;
+.info_text p {
+  font-size: 1rem;
+  font-weight: var(--p-font-weight);
+  line-height: 1.4;
+  margin-top: 1rem;
+  max-width: 35rem;
+  font-family: var(--font1);
+  /* margin-right: 10rem;
   padding: 1rem 0;
-  width: 32rem;
+  text-align: justify;
   font-weight: 300;
   font-family: var(--font1);
-  font-size: 1rem;
+  font-size: 1rem; */
 }
 .header_buttons {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  /* display: flex;
+  justify-content: center;
+  margin-top: 1rem; */
 }
 
 .header_btn1 {
@@ -317,7 +338,7 @@ section.main {
 
 /* Styles for section services */
 .services_main_container {
-  height: fit-content;
+  min-height: fit-content;
   padding: 5rem 7rem;
 
   background-color: #010834;
@@ -400,7 +421,7 @@ section.main {
   padding-bottom: 1rem;
 }
 
-.services_title {
+.services_description h3 {
   font-size: 1.1rem;
   padding: 0.5rem 0;
   font-family: var(--font2);
@@ -552,7 +573,7 @@ section.customer_case {
 .customer_case_description {
   padding-left: 8rem;
   font-size: 2rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
   color: #010834;
   width: 50rem;
 }
@@ -879,15 +900,40 @@ footer p {
 }
 /* for responsiveness */
 
+/* scroll to top  */
+.scrollup {
+  display: none;
+  position: fixed;
+  height: 2.7rem;
+  width: 2.7rem;
+  background-color: var(--primary-color);
+  color: white;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+.scrollup a i {
+  padding-top: 0.9rem;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+.scrollup:hover {
+  background-color: #1378d0;
+}
+
 @media (max-width: 1200px) {
   .nav_row {
     margin-left: 1rem;
     margin-right: 1rem;
   }
   .main_heading h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
+  .main_heading {
+    min-width: fit-content;
+  }
   .services_main_container {
     padding: 3rem 2rem;
   }
@@ -903,7 +949,7 @@ footer p {
 
   /* stockholm */
 
-  .service .services_title {
+  .service .services_description h3 {
     font-size: 1rem;
     padding: 0.3rem 0;
   }
@@ -948,6 +994,10 @@ footer p {
 }
 
 @media (max-width: 992px) {
+  .top_info {
+    justify-content: center;
+    padding-right: 0;
+  }
   .nav-toggler {
     display: block;
   }
@@ -986,14 +1036,11 @@ footer p {
   }
 
   .header_body {
-    margin-left: auto;
-    margin-top: 3rem;
-    text-align: center;
+    margin-left: 5rem;
+    margin-top: 8rem;
   }
-
   .main_heading {
-    padding-top: 5rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   .services_main_container {
     grid-template-columns: auto;
@@ -1037,7 +1084,8 @@ footer p {
 
   .stockholm_container {
     grid-template-columns: auto;
-    height: fit-content;
+    min-height: fit-content;
+    min-width: fit-content;
   }
 
   .overlay {
@@ -1073,11 +1121,14 @@ footer p {
   .partners_img:nth-child(5) img {
     width: 100px;
   }
+
   .customer_case_description {
+    padding-right: 2rem;
     padding-left: 5rem;
     width: fit-content;
   }
   .customer_case_links ul {
+    padding-right: 2rem;
     margin-right: 2rem;
     padding-left: 4rem;
     margin: auto;
@@ -1111,6 +1162,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .header_body {
+    margin-left: 4rem;
+    margin-top: 8rem;
+  }
   .partners_img:nth-child(1) img {
     margin-left: 1rem;
   }
@@ -1161,11 +1216,47 @@ footer p {
     padding: 1rem 1rem;
   }
   .grid_container {
-    gap: 2rem;
+    gap: 5px;
     grid-template-columns: auto;
+  }
+  .services_intro_button {
+    display: none;
+  }
+  .services_item {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+  }
+  .services_item {
+    text-align: start;
+  }
+  .part_services {
+    padding: 1rem 1rem;
+  }
+  .part_intro {
+    padding: 1rem 1rem;
   }
 }
 @media (max-width: 600px) {
+  .header_body {
+    margin-left: auto;
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .main_heading h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .header_buttons {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+  }
+  .header_btn1 {
+    margin-bottom: 1rem;
+  }
   .customer_case_links ul {
     justify-content: flex-start;
     margin-left: 2rem;
@@ -1241,6 +1332,56 @@ footer p {
   }
 }
 @media (max-width: 480px) {
+  .top_info {
+    font-size: var(--mb-para-size);
+  }
+  .phone a {
+    padding-right: 0.5rem;
+  }
+
+  .header_body {
+    margin: 5rem auto auto auto;
+  }
+  .header_buttons a {
+    font-size: var(--mb-para-size);
+  }
+  .customer_case_description p {
+    font-size: var(--mb-para-size);
+    text-align: center;
+    margin-left: auto;
+  }
+  .info_text p {
+    font-size: var(--mb-para-size);
+  }
+  .services_intro_title h1 {
+    font-size: 1.3rem;
+  }
+  .main_heading h1 {
+    font-size: 1.5rem;
+  }
+  .services_main_container {
+    padding: 0.2rem 0.2rem;
+    gap: 1rem;
+  }
+  .services_icon img {
+    height: auto;
+    width: 3rem;
+    padding-bottom: 1rem;
+  }
+  .part_services {
+    padding: 1rem 5px 2rem 5px;
+  }
+  .services_intro_description p {
+    font-size: var(--mb-para-size);
+  }
+  .services_description h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .services_description p {
+    font-size: var(--mb-para-size);
+  }
+
   .customer_case_grid_item img {
     height: 100%;
     width: 15rem;
@@ -1249,14 +1390,14 @@ footer p {
     font-size: var(--mb-para-size);
   }
   .how_we_work_title h5 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .how_we_work_title p {
     font-size: var(--mb-para-size);
   }
   .left_banner img {
     height: auto;
-    width: 15rem;
+    width: 100%;
   }
   .stockholm_container {
     padding: auto auto;
@@ -1268,18 +1409,24 @@ footer p {
     margin: auto;
     padding-left: 1rem;
   }
+  .customer_case_description h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
   .customer_case_links ul {
     padding-left: 5px;
   }
   .contact_container h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .contact {
     padding: 2rem auto;
   }
   .contact_description p {
+    text-align: left;
     padding-bottom: auto;
     font-size: var(--mb-para-size);
+    font-weight: var(--p-font-weight);
   }
   .customer_case_links ul {
     margin-left: auto;
@@ -1295,5 +1442,33 @@ footer p {
   }
   .stockholm_button {
     padding-bottom: 5rem;
+  }
+  .contact_form p {
+    font-size: var(--mb-para-size);
+  }
+  .contact_form form input::placeholder {
+    font-size: var(--mb-para-size);
+  }
+  .contact_form form textarea::placeholder {
+    font-size: var(--mb-para-size);
+  }
+  .contact_form form select {
+    font-size: var(--mb-para-size);
+  }
+  .policy_container {
+    font-size: var(--mb-para-size);
+  }
+  .form_button {
+    font-size: var(--mb-para-size);
+  }
+
+  .footer_container ul li a,
+  .footer_container ul li i,
+  .footer_container ul li,
+  .footer p {
+    font-size: var(--mb-para-size);
+  }
+  .footer_item h4 {
+    font-size: 1rem;
   }
 }
