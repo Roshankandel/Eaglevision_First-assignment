@@ -29,43 +29,52 @@ a {
 /*header*/
 .header {
   line-height: 1.5;
+  position: relative;
 }
 
 .nav {
   align-items: center;
   font-size: 1rem;
-  justify-content: space-around;
-  text-align: center;
-  padding: 0.9rem 5rem;
   width: 100%;
-
   display: flex;
-  flex-shrink: 1;
+  justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 0.5rem;
 }
 .logo {
-  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
 }
 .logo img {
   height: auto;
   width: 10rem;
 }
+.nav_items {
+  display: flex;
+}
 .nav_items ul {
+  justify-content: space-around;
   display: flex;
   gap: 1.7rem;
   flex-wrap: nowrap;
-  flex-grow: 1;
-  flex-shrink: 1;
+}
+.nav_items ul li a {
+  border: 1pa solid;
 }
 .nav ul li a {
   color: white;
 }
 
+.top_info_space {
+  padding: 0 8% 0 0;
+}
+.nav_space {
+  padding: 1% 8%;
+}
+
 .nav_btn {
   /* margin-left: 5rem; */
   background-color: #0074da;
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
   color: white;
   height: fit-content;
   width: fit-content;
@@ -76,7 +85,8 @@ a {
   background-color: #0c68b9;
 }
 .nav_button {
-  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 .nav ul li a::after {
   display: block;
@@ -155,9 +165,7 @@ a {
 
 #mynav.scrolled {
   background-color: var(--font-color);
-  padding: 0.7rem 0;
   top: 0;
-  margin: 0;
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -165,7 +173,7 @@ a {
 }
 #mynav.nav_open_active {
   background-color: var(--font-color);
-  padding: 0.7rem 0;
+  padding: 3rem 0;
   top: 0;
   margin: 0;
   width: 100%;
@@ -189,7 +197,6 @@ section.main {
 }
 
 .top_info {
-  padding-right: 12rem;
   align-items: center;
   height: 3rem;
   width: 100%;
@@ -227,16 +234,14 @@ section.main {
 
 .header_body {
   color: white;
-  z-index: 1;
-  margin: auto;
-  margin-top: 8rem;
-  max-width: fit-content;
+  max-width: max-content;
   display: block;
-  justify-content: center;
 }
 
+.padding_header_body {
+  padding: 12% 0 0 16.5%;
+}
 .main_heading h1 {
-  min-width: fit-content;
   font-size: 3.5rem;
   font-weight: 800;
   font-family: var(--font2);
@@ -245,6 +250,7 @@ section.main {
   font-size: 1rem;
   font-weight: var(--p-font-weight);
   line-height: 1.4;
+
   margin-top: 1rem;
   max-width: 35rem;
   font-family: var(--font1);
@@ -285,8 +291,9 @@ section.main {
 }
 
 .arrow-down {
-  text-align: center;
-  margin-top: 9rem;
+  bottom: 15%;
+  left: 50%;
+  position: absolute;
 }
 .arrow-down a {
   color: white;
@@ -294,15 +301,18 @@ section.main {
 }
 
 /* Styles for section services */
+
 .services_main_container {
   min-height: fit-content;
-  padding: 5rem 7rem;
   background-color: #010834;
   color: white;
   width: 100%;
   display: grid;
   grid-template-columns: 45% 45%;
   gap: 5%;
+}
+.padding_services {
+  padding: 4% 8%;
 }
 .services_intro_title h1 {
   font-size: 2.2rem;
@@ -389,9 +399,11 @@ section.main {
 }
 
 /* styles for how do we work section */
+.common_padding {
+  padding: 4% 8%;
+}
 section.how_we_work {
   background-color: #ffffff;
-  padding: 4rem 8rem;
   color: #010834;
   overflow: auto;
 }
@@ -454,17 +466,18 @@ section.how_we_work {
 
 /* styles for stockholm section */
 
-.stockholm_container {
+section.stockholm {
   background-color: #f9f9f9;
+}
+.stockholm_container {
   display: grid;
   grid-template-columns: 45% 45%;
   gap: 10%;
-  padding: 5rem 4rem;
 }
-.left_banner {
+/* .left_banner {
   padding-left: 3rem;
   padding-right: 3rem;
-}
+} */
 .left_banner img {
   height: auto;
   width: 115%;
@@ -525,10 +538,10 @@ section.how_we_work {
 section.customer_case {
   background-color: rgb(255, 255, 255);
 }
+
 .customer_case_description {
-  padding-left: 8rem;
+  padding: 4% 8%;
   font-size: 2rem;
-  padding-top: 3rem;
   color: #010834;
   width: 50rem;
 }
@@ -613,20 +626,21 @@ section.customer_case {
   opacity: 1;
 }
 
+.customer_case_links {
+  padding: 1% 8%;
+}
 .customer_case_links ul {
   display: flex;
-  margin-right: 5rem;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-left: 6.8rem;
 }
 .customer_case_links ul li {
   font-size: 1rem;
   font-weight: 500;
   color: var(--font-color);
-  padding-left: 1rem;
 }
 .customer_case_links ul li a {
+  text-decoration: none;
   border-bottom: 2px solid var(--font-color);
 }
 
@@ -819,7 +833,7 @@ section.customer_case {
 }
 
 .footer_container {
-  padding: 3.5rem 8rem;
+  padding: 4% 8%;
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
@@ -864,9 +878,12 @@ footer p {
 }
 /* for responsiveness */
 @media (max-width: 1200px) {
+  .top_info {
+    padding: 0 1% 0 0;
+  }
+
   .nav {
     padding: 0.9rem 0.5rem;
-    justify-content: center;
   }
   .main_heading h1 {
     font-size: 3rem;
@@ -959,7 +976,7 @@ footer p {
     width: 100%;
     color: white;
     display: block;
-    height: 90vh;
+    height: 100vh;
   }
   .logo {
     padding-left: 20px;
@@ -978,7 +995,7 @@ footer p {
   }
 
   .header_body {
-    margin-top: 8rem;
+    padding: 19% 10%;
   }
   .main_heading {
     font-size: 1.9rem;
@@ -1103,10 +1120,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  .header_body {
-    margin-left: 3rem;
-    margin-top: 8rem;
-  }
   .arrow-down {
     display: none;
   }
