@@ -61,7 +61,14 @@
                 <div class="nav_items">
                     <ul>
                         <li>
-                            <a href="#">Services</a>
+                            <div class="dropdown">
+                                <button class="dropbtn">Dropdown</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
+                            </div>
                         </li>
                         <li><a href="#">WooCommerce E-commerce</a></li>
                         <li><a href="#">How we work</a></li>
@@ -307,21 +314,17 @@
 
         <div class="customer_case_links">
             <ul>
-                <li><a href="#home">Homepage</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#">SEO</a></li>
-                <li><a href="#">Automation</a></li>
-                <li><a href="#">Marketing</a></li>
-
-                <li><a class="projects_link" href="#">see all projects <i class="fa-solid fa-arrow-right"></i></a>
-                </li>
+                <li class="list" data-filter="seo">SEO</li>
+                <li class="list" data-filter="automation">Automation</li>
+                <li class="list" data-filter="marketing">Marketing</li>
+                <li class="list" data-filter="all">see all projects <i class="fa-solid fa-arrow-right"></i> </li>
             </ul>
         </div>
 
         <!-- grid item 1 -->
 
-        <div class="customer_case_grid_container">
-            <div class="customer_case_grid_item">
+        <div class="customer_case_grid_container ">
+            <div class="customer_case_grid_item seo">
                 <img src="./assets/images/comp_img1.jpg" alt="">
                 <div class="overlay">
                     <p>Homepages</p>
@@ -334,7 +337,7 @@
 
             <!-- grid item 2-->
 
-            <div class="customer_case_grid_item">
+            <div class="customer_case_grid_item seo">
                 <img src="./assets/images/comp_img2.jpg" alt="">
                 <div class="overlay">
                     <p>Homepages</p>
@@ -348,7 +351,7 @@
 
             <!-- grid item 3 -->
 
-            <div class="customer_case_grid_item">
+            <div class="customer_case_grid_item automation">
                 <img src="./assets/images/comp_img3.jpg" alt="">
                 <div class="overlay">
                     <p>Homepages</p>
@@ -363,7 +366,7 @@
 
             <!-- grid item 4 -->
 
-            <div class="customer_case_grid_item">
+            <div class="customer_case_grid_item seo">
                 <img src="./assets/images/comp_img4.jpg" alt="">
                 <div class="overlay">
                     <p>Homepages</p>
@@ -376,7 +379,7 @@
             </div>
             <!-- grid item 5-->
 
-            <div class="customer_case_grid_item">
+            <div class="customer_case_grid_item marketing">
                 <img src="./assets/images/comp_img1.jpg" alt="">
                 <div class="overlay">
                     <p>Homepages</p>
@@ -389,7 +392,7 @@
 
             <!-- grid item 6-->
 
-            <div class="customer_case_grid_item">
+            <div class="customer_case_grid_item automation">
                 <img src="./assets/images/comp_img2.jpg" alt="">
                 <div class="overlay">
                     <p>Homepages</p>
@@ -441,38 +444,44 @@
             </div>
 
             <div class="contact_form">
+
                 <p>Do you want help with your next web project?</p>
-                <form action="">
-                    <select id="services" name="Choose Service">
-                        <option value="services">choose services</option>
-                        <option value="saab">Normal Website</option>
-                        <option value="fiat">SEO</option>
-                        <option value="audi">E-commerce</option>
-                        <option value="saab">Ux-Design</option>
-                        <option value="fiat">Google Ads</option>
-                        <option value="audi">Web Analysis</option>
-                        <option value="fiat">landing pages</option>
-                        <option value="audi">Conversation Optimization</option>
-                        <option value="fiat">marketing Automation</option>
-                        <option value="audi">Miscellaneous</option>
-                    </select>
+                <div class="form_container">
+                    <form action="">
+                        <select id="services" name="Choose Service">
+                            <option value="services">choose services</option>
+                            <option value="saab">Normal Website</option>
+                            <option value="fiat">SEO</option>
+                            <option value="audi">E-commerce</option>
+                            <option value="saab">Ux-Design</option>
+                            <option value="fiat">Google Ads</option>
+                            <option value="audi">Web Analysis</option>
+                            <option value="fiat">landing pages</option>
+                            <option value="audi">Conversation Optimization</option>
+                            <option value="fiat">marketing Automation</option>
+                            <option value="audi">Miscellaneous</option>
+                        </select>
 
-                    <div class="flex_containers"><input type="email" placeholder="Your e-mail">
-                        <input type="text" placeholder="Your phone number">
-                    </div>
+                        <div class="flex_containers"><input type="email" placeholder="Your e-mail">
+                            <input type="text" placeholder="Your phone number">
+                        </div>
 
-                    <textarea name="message" id="" cols="30" rows="10"
-                        placeholder="Describe your matter/assignment"></textarea>
-                    <br>
-                    <div class="policy_container">
-                        <span class="policy"> <input type="checkbox" id="check" name="privacy_policy">
+                        <textarea name="message" id="" cols="30" rows="10"
+                            placeholder="Describe your matter/assignment"></textarea>
+                        <br>
+
+                    </form>
+                </div>
+                <div class="policy_container">
+                    <div class="container_inside">
+                        <div class="policy">
+
+                            <input type="checkbox" id="check" name="privacy_policy">
                             <label for="check">Accept ours <a href="#">Privacy policy</a></label>
-                        </span>
-
-                        <button class="form_button">Send Contact Details</button>
+                        </div>
+                        <div class="form_btn"><button class="form_button">Send Contact Details</button></div>
                     </div>
-
-                </form>
+                </div>
             </div>
         </div>
 

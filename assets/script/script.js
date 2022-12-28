@@ -47,4 +47,19 @@ $(document).ready(function () {
 
 
     });
+
+
+    // services filter in customer case section
+    $('.list').click(function () {
+        const value = $(this).attr('data-filter');
+        if (value == 'all') {
+            $('.customer_case_grid_item').show('1000');
+        }
+        else {
+            $('.customer_case_grid_item').not('.' + value).hide('1000');
+            $('.customer_case_grid_item').filter('.' + value).show('1000');
+        }
+
+    });
+
 });
