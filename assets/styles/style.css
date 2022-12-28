@@ -48,13 +48,6 @@ a {
   height: auto;
   width: 10rem;
 }
-
-
-
-/* dropdown */
-
-
-
 .nav_items {
   display: flex;
 }
@@ -579,10 +572,11 @@ section.customer_case {
 }
 .customer_case_grid_container {
   color: #010834;
+  width: 100%;
   margin-top: 3rem;
   /* padding: 2% 7%; */
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 32.7% 32.7% 32.7%;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
 }
@@ -735,7 +729,7 @@ section.customer_case {
   padding-bottom: 1.5rem;
 }
 .contact_form {
-  padding: 2rem 0;
+  padding: 1rem;
   justify-content: center;
   display: block;
   background-color: #010834;
