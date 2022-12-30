@@ -173,7 +173,7 @@ a {
 }
 #mynav.nav_open_active {
   background-color: var(--font-color);
-  padding: 3rem 0;
+
   top: 0;
   margin: 0;
   width: 100%;
@@ -270,7 +270,7 @@ section.main {
   color: white;
   border: 1px solid var(--primary-color);
   height: fit-content;
-  width: fit-content;
+  width: 10rem;
 }
 
 .header_btn1:hover {
@@ -286,7 +286,7 @@ section.main {
   color: white;
   height: fit-content;
   margin-left: 10px;
-  width: fit-content;
+  width: 10rem;
 }
 
 .header_btn2:hover {
@@ -545,9 +545,10 @@ section.stockholm {
 section.customer_case {
   background-color: rgb(255, 255, 255);
 }
-
+.customer_case_description.common_padding {
+  padding: 4% 8% 1% 8%;
+}
 .customer_case_description {
-  padding: 4% 8%;
   font-size: 2rem;
   color: #010834;
   width: 50rem;
@@ -561,7 +562,6 @@ section.customer_case {
   font-family: var(--font2);
   font-size: 2.2rem;
   font-weight: 700;
-  padding-bottom: 2rem;
 }
 .customer_case_description span a {
   font-size: 1rem;
@@ -667,42 +667,43 @@ section.customer_case {
   justify-content: center;
 }
 .partners_containers {
+  height: fit-content;
+  padding: 1rem 1rem;
   background-color: #010834;
-  display: flex;
-  gap: 3rem;
-  padding: 3rem 5rem;
-  justify-content: space-around;
-  overflow: scroll;
-  margin: auto;
   align-items: center;
   align-self: center;
-  width: 100%;
 }
-.partners_containers::-webkit-scrollbar {
+/* .partners_containers::-webkit-scrollbar {
   display: none;
+} */
+
+.slide {
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+  text-align: center;
+  align-items: center;
+  align-self: center;
 }
-.partners_img:nth-child(1) img {
-  padding-left: 2rem;
-  height: auto;
-  width: 170px;
-}
-.partners_img:nth-child(2) img {
-  height: auto;
-  width: 170px;
-}
-.partners_img:nth-child(3) img {
-  height: auto;
-  width: 120px;
-}
-.partners_img:nth-child(4) img {
-  height: auto;
-  width: 120px;
-}
-.partners_img:nth-child(5) img {
-  height: auto;
-  width: 150px;
+.partners_img img {
+  object-fit: cover;
+  display: flex;
+  width: 100%;
+  max-width: 150px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
 }
 
+.slider_container {
+  overflow: hidden;
+  padding: 1% 5%;
+}
+
+.slick-next {
+  right: 5%;
+}
 /* styles for contact Section */
 .contact {
   padding: 4rem 2rem;
@@ -815,6 +816,9 @@ section.customer_case {
   align-items: center;
   flex-wrap: nowrap;
 }
+.policy label {
+  padding-left: 8px;
+}
 .policy label a {
   text-decoration: none;
   color: white;
@@ -919,21 +923,20 @@ footer p {
 /* for responsiveness */
 @media (max-width: 1200px) {
   .top_info {
-    padding: 0 1% 0 0;
+    padding: 0 2.5rem 0 0;
   }
 
   .nav {
-    padding: 0.9rem 0.5rem;
+    padding: 0.9rem 2.5rem;
   }
   .main_heading h1 {
     font-size: 3rem;
   }
-
   .main_heading {
     min-width: fit-content;
   }
   .services_main_container {
-    padding: 3rem 2rem;
+    padding: 2rem 3rem;
   }
   .services_intro_title h1 {
     font-size: 2rem;
@@ -945,6 +948,16 @@ footer p {
     gap: 1.5rem;
   }
 
+  .how_we_work.common_padding {
+    padding: 2rem 3rem;
+  }
+
+  .customer_case_description.common_padding {
+    padding: 2rem 3rem;
+  }
+  .customer_case_links {
+    padding: 1rem 3rem;
+  }
   /* stockholm */
 
   .service .services_description h3 {
@@ -955,6 +968,11 @@ footer p {
     padding: 3rem 3rem;
     color: #010834;
     overflow: hidden;
+  }
+
+  .partners_img img {
+    width: 70%;
+    max-width: 190px;
   }
   .contact {
     padding: 3rem 1rem;
@@ -976,24 +994,9 @@ footer p {
   }
 
   .footer_container {
-    padding: 3rem 2rem;
+    margin-left: 0;
+    padding: 2.5rem 3rem;
     justify-content: flex-start;
-  }
-  .partners_img:nth-child(1) img {
-    padding-left: 2rem;
-    width: 150px;
-  }
-  .partners_img:nth-child(2) img {
-    width: 150px;
-  }
-  .partners_img:nth-child(3) img {
-    width: 100px;
-  }
-  .partners_img:nth-child(4) img {
-    width: 100px;
-  }
-  .partners_img:nth-child(5) img {
-    width: 130px;
   }
 }
 
@@ -1047,13 +1050,17 @@ footer p {
     font-size: 1.9rem;
   }
   .services_main_container {
+    padding: 1rem 1rem;
     grid-template-columns: auto;
   }
   .part_intro {
-    padding: 2rem 5rem;
+    padding: 2rem 1rem;
+  }
+  .services {
+    height: fit-content;
   }
   .part_services {
-    padding: 2rem 2.5rem;
+    padding: 2rem 1rem 4rem 1rem;
   }
   .services_intro_description {
     font-size: 1rem;
@@ -1061,8 +1068,11 @@ footer p {
   .services_intro_title {
     font-size: 1.5rem;
   }
+  .how_we_work.common_padding {
+    padding: 2rem 1rem;
+  }
   .customer_case_grid_container {
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
     grid-template-columns: repeat(6, 1fr);
     height: auto;
     overflow: scroll;
@@ -1087,6 +1097,7 @@ footer p {
   }
 
   .stockholm_container {
+    gap: 5%;
     grid-template-columns: auto;
     min-height: fit-content;
     min-width: fit-content;
@@ -1101,41 +1112,28 @@ footer p {
   .overlay span h3 {
     font-size: 0.7rem;
   }
+
+  .partners_img img {
+    width: 65%;
+    max-width: 190px;
+  }
   .footer_container {
     padding: 3rem 2rem;
     justify-content: center;
     flex-direction: column;
   }
-  .partners_containers {
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-  .partners_img:nth-child(1) img {
-    width: 150px;
-  }
-  .partners_img:nth-child(2) img {
-    width: 130px;
-  }
-  .partners_img:nth-child(3) img {
-    width: 80px;
-  }
-  .partners_img:nth-child(4) img {
-    width: 80px;
-  }
-  .partners_img:nth-child(5) img {
-    width: 100px;
-  }
 
   .customer_case_description {
-    padding-right: 2rem;
-    padding-left: 5rem;
     width: fit-content;
   }
+  .customer_case_description.common_padding {
+    padding: 3rem 2rem 1rem 2rem;
+  }
   .customer_case_links ul {
-    padding-right: 2rem;
-    margin-right: 2rem;
-    padding-left: 4rem;
     margin: auto;
+  }
+  .customer_case_links {
+    padding: 1rem 2rem;
   }
   .customer_case_description h3 {
     font-size: 1.5rem;
@@ -1148,9 +1146,17 @@ footer p {
     height: auto;
     width: 30rem;
   }
+  section.stockholm.common_padding {
+    padding: 2rem 2rem;
+  }
 
   .stockholm_button {
     padding-bottom: 3rem;
+  }
+  .left_banner {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
   }
 
   .how_we_work_grid_container {
@@ -1170,9 +1176,6 @@ footer p {
     display: none;
   }
 
-  .partners_img:nth-child(1) img {
-    margin-left: 1rem;
-  }
   .contact_form form input[type="checkbox"] {
     height: 15px;
     width: 15px;
@@ -1181,24 +1184,25 @@ footer p {
     padding-left: 3rem;
     padding-right: 1rem;
   }
+
   .customer_case_links ul {
-    padding-left: 2rem;
     margin: auto;
     margin-right: 1rem;
   }
   .customer_case_links ul li a {
     margin-top: 1rem;
   }
-  .customer_case_grid_container {
+  /* .customer_case_grid_container {
     padding: 1rem 3rem;
-  }
+  } */
 
   .stockholm_title h4 {
     font-size: 1.8rem;
   }
   .stockholm_container {
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
     height: max-content;
+    gap: 10%;
   }
   .left_banner img {
     height: auto;
@@ -1211,7 +1215,13 @@ footer p {
   .how_we_work_grid_container {
     grid-template-columns: auto auto auto auto auto;
     gap: 2rem;
-    padding-left: 2rem;
+    padding: 0 0;
+  }
+  .how_we_work.common_padding {
+    padding: 1rem 1rem;
+  }
+  section.stockholm.common_padding {
+    padding: 2rem 1rem;
   }
   .grid_item {
     width: 10rem;
@@ -1220,6 +1230,7 @@ footer p {
     padding: 1rem 1rem;
   }
   .grid_container {
+    height: 100%;
     gap: 5px;
     grid-template-columns: auto;
   }
@@ -1228,20 +1239,49 @@ footer p {
   }
   .services_item {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
+    grid-template-columns: 15% 80%;
+    gap: 0.5rem;
   }
   .services_item {
     text-align: start;
   }
-  .part_services {
-    padding: 1rem 1rem;
+
+  .partners_img img {
+    width: 60%;
+    max-width: 190px;
+  }
+  .slider_container {
+    padding: 1% 4%;
+  }
+  .partners_containers {
+    padding: 0.5rem 0.5rem;
+  }
+  /*  */
+  .services_main_container {
+    gap: 0;
   }
   .part_intro {
-    padding: 1rem 1rem;
+    padding-top: 3rem;
+  }
+  .services_icon {
+    width: 3rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .services_description {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .services_description h3 {
+    display: flex;
+    justify-content: flex-start;
   }
   .contact_form form textarea {
     width: 90%;
+  }
+  .contact_form {
+    margin: 1rem 1rem;
   }
   .container_inside {
     width: 26rem;
@@ -1260,7 +1300,7 @@ footer p {
 @media (max-width: 600px) {
   .header_body {
     margin-left: auto;
-    margin-top: 8rem;
+
     text-align: center;
   }
   .main_heading h1 {
@@ -1275,7 +1315,7 @@ footer p {
   }
   .customer_case_links ul {
     justify-content: flex-start;
-    margin-left: 2rem;
+
     gap: 1rem;
     margin-right: 1rem;
   }
@@ -1293,6 +1333,7 @@ footer p {
 
   .contact_form form select {
     width: 90%;
+    margin-bottom: 15px;
   }
 
   .contact_form form input:nth-child(2) {
@@ -1314,7 +1355,6 @@ footer p {
   }
   .stockholm_title h4 {
     font-size: 1.7rem;
-    text-align: center;
   }
   /* stockholm */
   .policy_container {
@@ -1326,15 +1366,12 @@ footer p {
     margin: auto;
   }
   .customer_case_grid_container {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
   }
   .customer_case_grid_container::-webkit-scrollbar {
     display: none;
   }
   .customer_case_description {
-    padding-left: 1rem;
-    text-align: center;
-    padding-right: 1rem;
   }
   .customer_case_links ul {
     padding-left: 5px;
@@ -1342,8 +1379,6 @@ footer p {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 10px;
-    margin-left: 1rem;
-
     margin-right: 5px;
   }
   .stockholm_button {
@@ -1351,9 +1386,7 @@ footer p {
     align-items: center;
     text-align: center;
   }
-  .stockholm_title p {
-    text-align: center;
-  }
+
   .customer_case_grid_item img {
     height: 100%;
     width: 20rem;
@@ -1372,28 +1405,34 @@ footer p {
   }
   .top_info {
     font-size: 13px;
-    justify-content: space-between;
-    padding: auto 5px;
+    justify-content: space-around;
   }
   .phone a {
     padding-right: 0.5rem;
   }
 
   .header_body {
-    margin: 5rem auto auto auto;
+    margin: 3rem auto auto auto;
   }
+
   .header_buttons {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.5rem;
     align-content: center;
-    justify-content: center;
+  }
+  .header_btn2 {
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
   }
   .header_buttons a {
     font-size: var(--mb-para-size);
   }
   .customer_case_description p {
     font-size: var(--mb-para-size);
-    text-align: center;
+
     margin-left: auto;
   }
   .info_text p {
@@ -1401,10 +1440,12 @@ footer p {
   }
   .services_intro_title h1 {
     font-size: 1.3rem;
-    text-align: center;
   }
   .main_heading h1 {
     font-size: 1.5rem;
+  }
+  .how_we_work.common_padding {
+    padding: 0.5rem 0.5rem;
   }
   .services_main_container {
     padding: 0.2rem 0.2rem;
@@ -1454,11 +1495,9 @@ footer p {
   }
   .customer_case_description {
     margin: auto;
-    padding-left: 1rem;
   }
   .customer_case_description h3 {
     font-size: 1.3rem;
-    text-align: center;
   }
   .customer_case_links ul {
     padding-left: 5px;
@@ -1483,7 +1522,15 @@ footer p {
   }
   .stockholm_title h4 {
     font-size: 1.4rem;
-    text-align: center;
+  }
+  .services_main_container.padding_services {
+    padding: 2rem 0.5rem;
+  }
+  .stockholm_container {
+    padding: 0 0.5rem;
+  }
+  section.stockholm.common_padding {
+    padding: 2rem 0.5rem;
   }
   .stockholm_intro p {
     font-size: 13.6px;

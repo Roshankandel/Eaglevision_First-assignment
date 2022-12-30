@@ -22,8 +22,14 @@
     <!-- Box-icons -->
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- slick css-->
+    <link rel="stylesheet" href="./assets/plugins/slick/slick.css">
+    <link rel="stylesheet" href="./assets/plugins/slick/slick-theme.css">
+
 
     <script src="./assets/script/jquery-3.6.3.js"></script>
+    <!-- slick js -->
+    <script src="./assets/plugins/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -138,26 +144,34 @@
                         <!-- <i class="fa-solid fa-code"></i> -->
                         <img src="./assets/images/services_img1.svg" alt="">
                     </div>
-
-
-
                     <div class="services_description">
                         <h3>Web development</h3>
-                        <p>WordPress, E-commerece, WooCommerce,Integrations,etc</p>
+                        <p>E-commerece, WooCommerce,Integrations,etc</p>
                     </div>
                 </div>
                 <!-- service item 2 -->
                 <div class="services_item">
                     <div class="services_icon">
-                        <!-- <i class="fa-brands fa-figma"></i> -->
+                        <!-- <i class="fa-solid fa-chart-bar"></i> -->
+                        <img src="./assets/images/services_img2.svg" alt="">
+                    </div>
+                    <div class="services_description">
+                        <h3>UX & Design</h3>
+                        <p>E-commerece, WooCommerce,Integrations,etc</p>
+                    </div>
+                </div>
+
+                <!-- <div class="services_item">
+                    <div class="services_icon">
+                       
                         <img src="./assets/images/services_img2.svg" alt="">
                     </div>
 
                     <div class="services_description">
                         <h3>UX & Design</h3>
-                        <p>Mockups, Prototypes, conversion optimization, etc</p>
+                        <p>Mockups, Prototypes, conversion optimization,etc</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- service item 3 -->
                 <div class="services_item">
                     <div class="services_icon">
@@ -401,23 +415,52 @@
 
 
     <section class="partners">
-        <div class="partners_containers common_padding">
-            <div class="partners_img">
-                <img src="./assets/images/partner1.webp" alt="">
+
+        <div class="partners_containers common_padding ">
+            <div class="slider_container">
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner1.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner3.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner4.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner5.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner1.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner3.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner2.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner1.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner4.webp" alt="">
+                </div>
+
+                <div class="partners_img slide">
+                    <img src="./assets/images/partner5.webp" alt="">
+                </div>
             </div>
-            <div class="partners_img">
-                <img src="./assets/images/partner2.webp" alt="">
-            </div>
-            <div class="partners_img">
-                <img src="./assets/images/partner3.webp" alt="">
-            </div>
-            <div class="partners_img">
-                <img src="./assets/images/partner4.webp" alt="">
-            </div>
-            <div class="partners_img">
-                <img src="./assets/images/partner5.webp" alt="">
-            </div>
+
         </div>
+
     </section>
 
     <section class="contact">
@@ -470,7 +513,7 @@
                         <div class="policy">
 
                             <input type="checkbox" id="check" name="privacy_policy">
-                            <label for="check">Accept ours <a href="#">Privacy policy</a></label>
+                            <label for="check"> Accept ours <a href="#">Privacy policy</a></label>
                         </div>
                         <div class="form_btn"><button class="form_button">Send Contact Details</button></div>
                     </div>
