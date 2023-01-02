@@ -13,7 +13,7 @@
   --mb-para-size: 0.85rem;
   --p-font-weight: 300;
 }
-body {
+/* body {
   background-color: #e8eef3;
   color: var(--font-color);
   font-family: var(--font1);
@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-/*header*/
+
 .header {
   line-height: 1.5;
   position: relative;
@@ -72,7 +72,7 @@ a {
 }
 
 .nav_btn {
-  /* margin-left: 5rem; */
+ 
   background-color: #0074da;
   padding: 0.5rem 1rem;
   color: white;
@@ -106,7 +106,7 @@ a {
   color: #0074da;
 }
 
-/* Nav toggler */
+
 
 .nav-toggler {
   color: black;
@@ -180,7 +180,7 @@ a {
   position: fixed;
   z-index: 1;
   overflow: hidden;
-}
+} */
 
 /* changed by roshan */
 
@@ -481,10 +481,7 @@ section.stockholm {
   grid-template-columns: 45% 45%;
   gap: 10%;
 }
-/* .left_banner {
-  padding-left: 3rem;
-  padding-right: 3rem;
-} */
+
 .left_banner img {
   height: auto;
   width: 115%;
@@ -1192,9 +1189,6 @@ footer p {
   .customer_case_links ul li a {
     margin-top: 1rem;
   }
-  /* .customer_case_grid_container {
-    padding: 1rem 3rem;
-  } */
 
   .stockholm_title h4 {
     font-size: 1.8rem;
@@ -1371,8 +1365,7 @@ footer p {
   .customer_case_grid_container::-webkit-scrollbar {
     display: none;
   }
-  .customer_case_description {
-  }
+
   .customer_case_links ul {
     padding-left: 5px;
     display: flex;

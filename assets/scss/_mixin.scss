@@ -1,0 +1,19 @@
+@mixin common_position($fwrap, $jc, $ai){
+display: flex;
+flex-wrap: $fwrap;
+justify-content:$jc;
+align-items:$ai;
+}
+
+@mixin padding($t,$r,$b,$l){
+    padding: $t $r $b $l;
+}
+
+@mixin margin($t,$r,$b,$l){
+    margin:$t $r $b $l;
+}
+
+@mixin box_size($height,$width){
+height: $width;
+width: $width;
+}
