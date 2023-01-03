@@ -1,5 +1,54 @@
 
 @import "mixin";
+section.main {
+  @include box_size(90vh,100%);
+  text-decoration: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)),
+    url("../images/background2.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+}
+
+.top_info {
+  @include common_position(nowrap,flex-end,center);
+  @include box_size(3rem,100%);
+  @include text_style($primary_font_color,1rem,100,center);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.phone a {
+  text-decoration: none;
+  display: inline-flex;
+  padding-right: 3rem;
+  color: white;
+
+ &:hover {
+    color: $btn_bg_color;
+  }
+}
+.phone i {
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.mail a {
+  text-decoration: none;
+  display: inline-flex;
+  color: $primary_font_color;
+
+  &:hover {
+    color: $btn_bg_color;
+  }
+}
+.mail i {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+
   .nav {
    @include common_position(wrap,space-between,center);
     font-size: 1rem;
@@ -7,50 +56,52 @@
   }
   .logo {
     @include common_position(nowrap,flex-start,center);
+    & img {
+      @include box_size(auto,60%);
+    }
   }
-  .logo img {
-    @include box_size(auto,7rem);
-  }
+ 
   .nav_items {
     display: flex;
+
+    & ul {
+      @include common_position(nowrap,space-around,center);
+      gap: 1.7rem;
+    }
   }
-  .nav_items ul {
-    @include common_position(nowrap,space-around,center);
-    gap: 1.7rem;
-  }
+  
   .nav ul li a {
     color: white;
   }
   
   .top_info_space {
-    padding: 0 8% 0 0;
+    @include padding(0,8%,0,0);
   }
   .nav_space {
-    padding: 1% 8%;
+   
+    @include padding_two_param(1%,8%);
   }
   
   .nav_btn {
-   
-    background-color: #0074da;
-    padding: 0.5rem 1rem;
-    color: white;
     @include box_size(fit-content,fit-content);
-
-  
+    background-color: $btn_bg_color;
+    padding: 0.5rem 1rem;
+    color: $primary_font_color;
     border-radius: 2px;
-  }
-  
-  .nav_btn:hover {
-    background-color: #0c68b9;
+    &:hover {
+      background-color: $btn_bg_color;
+    }
   }
   .nav_button {
     display: flex;
     justify-content: flex-end;
+    @include common_position(nowrap,flex-end,center);
+    
   }
   .nav ul li a::after {
     display: block;
     content: "";
-    border-bottom: 2.5px solid #0074da;
+    border-bottom: 2.5px solid $btn_bg_color;
     transform: scaleX(0);
     transition: transform 0.3s ease-in;
     transition: transform 0.1s ease-out;
@@ -58,64 +109,59 @@
   }
   .nav ul li a:hover::after {
     transform: scaleX(1);
+    &.active,
+    &:hover {
+      color: $btn_bg_color;
+    }
   }
-  
-  .nav ul li a.active,
-  .nav ul li a:hover {
-    color: #0074da;
-  }
-  
-  
-  
   .nav-toggler {
     color: black;
-    height: 34px;
-    width: 44px;
+    @include box_size(34px,44px);
     background-color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
     border: none;
     display: none;
     margin-right: 15px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    & span {
+      @include box_size(2px,20px);
+      background-color: black;
+      display: block;
+      margin: auto;
+      position: relative;
+      transition: all 0.3s ease;
+      &::before,
+      &::after {
+        content: "";
+        @include alignment(0,0,absolute);
+        @include box_size(100%,100%);
+        background-color: black;
+        transition: all 0.3s ease;
+      }
+
+      &::before {
+        transform: translateY(-6px);
+      }
+     
+      &::after {
+        transform: translateY(6px);
+      }
+    }
   }
-  .nav-toggler:focus {
-    outline: none;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-  }
-  .nav-toggler span {
-    height: 2px;
-    width: 20px;
-    background-color: black;
-    display: block;
-    margin: auto;
-    position: relative;
-    transition: all 0.3s ease;
-  }
+
   .nav-toggler.active span {
     background-color: transparent;
-  }
-  .nav-toggler span::before,
-  .nav-toggler span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    transition: all 0.3s ease;
-  }
-  .nav-toggler span::before {
-    transform: translateY(-6px);
-  }
-  .nav-toggler.active span::before {
-    transform: rotate(45deg);
-  }
-  .nav-toggler span::after {
-    transform: translateY(6px);
-  }
-  .nav-toggler.active span::after {
-    transform: rotate(135deg);
+    &::before {
+      transform: rotate(45deg);
+    }
+   &::after {
+      transform: rotate(135deg);
+    }
   }
   .header #nav {
     display: flex;
@@ -123,20 +169,55 @@
   }
   
   #mynav.scrolled {
-    background-color: var(--font-color);
-    top: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    overflow: hidden;
+    @include mynav_common_styles;
   }
   #mynav.nav_open_active {
-    background-color: var(--font-color);
-  
-    top: 0;
-    margin: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    overflow: hidden;
+   @include mynav_common_styles;
   }
+
+
+  .header_body {
+    color: $primary_font_color;
+    max-width: max-content;
+    display: block;
+  }
+  
+  .padding_header_body {
+    @include padding(12%,0,0,16.5%);
+  }
+  .main_heading h1 {
+    @include text_style1(3.5rem,800,$Heading_font);
+  }
+
+
+  .info_text p {
+    @include text_style1(1rem,$p_font_weight,$paragraph_font);
+    line-height: 1.4;
+    margin-top: 1rem;
+    max-width: 35rem;
+   
+  }
+  .header_buttons {
+    margin-top: 2rem;
+  }
+  
+  .header_btn1 {
+
+    @include button(fit-content,10rem,0.7rem,1rem, $btn_bg_color,$primary_font_color,$btn_bg_color,transparent,$btn_bg_color);
+  }
+  .header_btn2 {
+    @include button(fit-content,10rem,0.7rem,1rem,transparent,$primary_font_color,$primary_font_color,$btn_bg_color,$btn_bg_color);
+
+  }
+  .arrow-down {
+    bottom: 15%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+
+    & a {
+      color: $primary_font_color;
+      font-size: 2rem;
+    }
+  }
+  

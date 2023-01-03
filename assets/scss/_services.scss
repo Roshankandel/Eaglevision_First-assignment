@@ -1,0 +1,72 @@
+@import "mixin";
+@import "variables";
+.services_main_container {
+    min-height: fit-content;
+    background-color: #010834;
+    color: $primary_font_color;
+    width: 100%;
+    @include grid_view(5%,45%,45%);
+}
+
+.padding_services {
+    @include padding_two_param(4%, 8%);
+}
+
+.services_intro_title h1 {
+    @include text_style1(2.2rem, bold, $Heading_font);
+}
+
+.services_intro_description {
+    @include text_style1(1rem, $p_font_weight, $paragraph_font);
+    @include padding_two_param(2rem, 0);
+    vertical-align: inherit;
+    line-height: 1.6;
+
+    & span a {
+        color: $primary_font_color;
+        font-weight: $p_font_weight;
+        border-bottom: 1px solid $btn_bg_color;
+
+        & :hover {
+            border-bottom: 1px solid $btn_bg_color;
+            color: $btn_bg_color;
+        }
+    }
+
+}
+
+.services_intro_button {
+    margin-top: 1rem;
+
+
+    .services_btn1 {
+        @include button(fit-content,10rem,0.7rem,1rem, $btn_bg_color,$primary_font_color,$btn_bg_color,transparent,$btn_bg_color);
+    }
+    .services_btn2 {
+        @include button(fit-content,10rem,0.7rem,1rem,transparent,$primary_font_color,$primary_font_color,$btn_bg_color,$btn_bg_color);
+    }
+}
+.services_item {
+    text-align: center;
+}
+.grid_container {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    @include grid_view(2rem,auto,auto);
+}
+.services_icon {
+    text-align: center;
+    & img {
+        @include box_size(auto,4rem);
+        padding-bottom: 1rem;
+    }
+}
+.services_description h3 {
+    @include text_style1(1.1rem,bold,$Heading_font);
+    @include padding_two_param(0.5rem,0);
+}
+.services_description p {
+    font-family: var(--font1);
+    font-weight: 200;
+}

@@ -184,7 +184,7 @@ a {
 
 /* changed by roshan */
 
-section.main {
+/* section.main {
   text-decoration: none;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)),
     url("../images/background2.jfif");
@@ -235,9 +235,9 @@ section.main {
   display: flex;
   align-items: center;
   padding-right: 10px;
-}
+} */
 
-.header_body {
+/* .header_body {
   color: white;
   max-width: max-content;
   display: block;
@@ -305,10 +305,10 @@ section.main {
 .arrow-down a {
   color: white;
   font-size: 2rem;
-}
+} */
 
 /* Styles for section services */
-
+/* 
 .services_main_container {
   min-height: fit-content;
   background-color: #010834;
@@ -403,9 +403,11 @@ section.main {
 .services_description p {
   font-family: var(--font1);
   font-weight: 200;
-}
+} */
 
 /* styles for how do we work section */
+
+/* 
 .common_padding {
   padding: 4% 8%;
 }
@@ -469,10 +471,10 @@ section.how_we_work {
   line-height: 1.6;
   font-weight: 300;
   font-family: var(--font1);
-}
+} */
 
 /* styles for stockholm section */
-
+/* 
 section.stockholm {
   background-color: #f9f9f9;
 }
@@ -535,11 +537,11 @@ section.stockholm {
   border: 1px solid var(--primary-color);
   color: var(--primary-color) !important;
   transition: 0.3s;
-}
+} */
 
 /* Styles for customer case */
 
-section.customer_case {
+/* section.customer_case {
   background-color: rgb(255, 255, 255);
 }
 .customer_case_description.common_padding {
@@ -571,7 +573,6 @@ section.customer_case {
   color: #010834;
   width: 100%;
   margin-top: 3rem;
-  /* padding: 2% 7%; */
   display: grid;
   grid-template-columns: 32.7% 32.7% 32.7%;
   grid-row-gap: 10px;
@@ -656,7 +657,7 @@ section.customer_case {
 
 .customer_case_links ul li i {
   font-size: 1rem;
-}
+} */
 /* styles for partners section */
 .partners {
   padding-top: 0.6rem;

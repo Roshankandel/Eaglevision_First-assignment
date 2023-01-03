@@ -1,0 +1,65 @@
+@import "mixin";
+@import "variables";
+
+
+.common_padding {
+   
+    @include padding_two_param(4%,8%);
+  }
+  section.how_we_work {
+    background-color: $primary_font_color;
+    color:$secondary_font_color;
+    overflow: auto;
+  }
+  
+  .how_we_work_title {
+    padding-top: 2rem;
+    @include text_style( $secondary_font_color,1rem,400,center);
+  }
+  .how_we_work_title h5 {
+    @include text_style1(2.3rem,700,$Heading_font);
+    margin-top: 0.8rem;
+  }
+  .how_we_work_grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 2rem;
+    text-align: center;
+    overflow: scroll;
+  }
+  .how_we_work_grid_container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .grid_item {
+    position: relative;
+
+    & img {
+      margin-top: 3.5rem;
+      @include box_size(7rem,7rem);
+    }
+    &:before {
+      @include box_size(2px,80px);
+      content: "";
+      border-top: 2px dashed $secondary_font_color;
+      position: absolute;
+      bottom: 0rem;
+      top: 7rem;
+      transform: translate(64%);
+      right: 0rem;
+    }
+    &:nth-child(5)::before {
+      display: none;
+    }
+  }
+
+  
+  .grid_item_title {
+    @include text_style1(1.1rem,700,$paragraph_font);
+  }
+  .grid_item_description {
+    padding-top: 1.5rem;
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: $paragraph_font;
+  }

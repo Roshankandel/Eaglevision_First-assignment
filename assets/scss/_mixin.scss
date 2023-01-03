@@ -1,19 +1,80 @@
-@mixin common_position($fwrap, $jc, $ai){
-display: flex;
-flex-wrap: $fwrap;
-justify-content:$jc;
-align-items:$ai;
+@import "variables";
+
+@mixin common_position($fwrap, $jc, $ai) {
+    display: flex;
+    flex-wrap: $fwrap;
+    justify-content: $jc;
+    align-items: $ai;
 }
 
-@mixin padding($t,$r,$b,$l){
+@mixin padding($t, $r, $b, $l) {
     padding: $t $r $b $l;
 }
 
-@mixin margin($t,$r,$b,$l){
-    margin:$t $r $b $l;
+@mixin margin($t, $r, $b, $l) {
+    margin: $t $r $b $l;
 }
 
-@mixin box_size($height,$width){
-height: $width;
-width: $width;
+@mixin box_size($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin padding_two_param($tb, $lr) {
+    padding: $tb $lr;
+}
+
+@mixin margin_two_param($tb, $lr) {
+    margin: $tb $lr;
+}
+
+@mixin alignment($top, $left, $position) {
+    top: $top;
+    left: $left;
+    position: $position;
+}
+
+@mixin mynav_common_styles {
+    background-color: $primary_bg_color;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@mixin text_style($tc, $fs, $fw, $ta) {
+    color: $tc;
+    font-size: $fs ;
+    font-weight: $fw;
+    text-align: $ta ;
+}
+
+@mixin text_style1($fs, $fw, $ff) {
+    font-size: $fs;
+    font-weight: $fw;
+    font-family: $ff;
+}
+
+@mixin button($boxh, $boxw, $pd_tb, $pd_lr, $bg_c, $color, $border_color, $hover_bg_c, $hover_border_c) {
+    @include box_size($boxh, $boxw);
+    @include padding_two_param($pd_tb, $pd_lr);
+    background-color: $bg_c;
+    color: $color;
+    border: 1px solid $border_color;
+
+    &:hover {
+        background-color: $hover_bg_c;
+        border: 1px solid $hover_border_c;
+        transition: 0.5s;
+    }
+}
+
+
+
+@mixin grid_view($gap, $col1, $col2) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: $col1 $col2;
 }

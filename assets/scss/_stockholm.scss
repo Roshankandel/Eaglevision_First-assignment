@@ -1,0 +1,58 @@
+@import "mixin";
+@import "variables";
+
+section.stockholm {
+    background-color: #f9f9f9;
+}
+
+.stockholm_container {
+    @include grid_view(10%, 45%, 45%);
+}
+
+.left_banner img {
+
+    @include box_size(auto, 110%);
+
+}
+
+.stockholm_title p {
+    font-weight: $p_font_weight;
+}
+
+.stockholm_title h4 {
+    @include text_style1(2.2rem, 800, $Heading_font);
+    line-height: 1.2;
+}
+
+.stockholm_intro {
+    margin-top: 1rem;
+    @include text_style1(1rem, $p_font_weight, $paragraph_font);
+    color: $secondary_font_color;
+
+    & p {
+        padding-bottom: 2rem;
+        line-height: 1.6;
+
+        & span a {
+            text-decoration: none;
+            color: $secondary_font_color;
+            border-bottom: 2px solid $secondary_font_color;
+            font-weight: 400;
+
+            &:hover {
+                color: $btn_bg_color;
+                border-bottom: 2px solid $btn_bg_color;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+
+.stockholm_button a.button {
+    @include button(fit-content, 10rem, 0.6rem, 0.8rem, $btn_bg_color, $primary_font_color, $btn_bg_color, transparent, $btn_bg_color);
+    &:hover {
+        color: $btn_bg_color;
+    }
+
+}

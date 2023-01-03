@@ -1,0 +1,126 @@
+@import "mixin";
+@import "variables";
+
+section.customer_case {
+    background-color: $primary_font_color;
+}
+
+.customer_case_description.common_padding {
+    @include padding(4%, 8%, 1%, 8%);
+}
+
+.customer_case_description {
+    font-size: 2rem;
+    color: $secondary_font_color;
+    width: 50rem;
+
+    & p {
+        font-weight: 400;
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+
+    & h3 {
+        @include text_style1(2.2rem, 700, $Heading_font);
+    }
+
+    & span a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: $secondary_font_color;
+        border-bottom: 2px solid $secondary_font_color;
+        margin-bottom: 1rem;
+    }
+}
+.customer_case_grid_container {
+    color: #010834;
+    width: 100%;
+    margin-top: 3rem;
+    /* padding: 2% 7%; */
+    display: grid;
+    grid-template-columns: 32.7% 32.7% 32.7%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+.customer_case_grid_item {
+    @include box_size(auto,100%);
+    background-color: #010834;
+    position: relative;
+   & img {
+        @include box_size(100%,100%);
+    }
+}
+.overlay {
+    width: 95%;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 50%;
+    transform: translate(50%, 0%);
+    background: rgb(226, 226, 226);
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0.3s, opacity 0.3s linear;
+    transition: visibility 0.3s, opacity 0.3s linear;
+
+    & p {
+        font-size: 0.7rem;
+    }
+
+    & span {
+        display: flex;
+        justify-content: space-between;
+        @include text_style1(0.8rem, 700, $Heading_font);
+
+        & i {
+            font-size: 1rem;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.customer_case_grid_item:hover img {
+    background-color: #000000;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.customer_case_grid_item:hover .overlay {
+    visibility: visible;
+    background-color:$primary_font_color;
+    opacity: 1;
+}
+
+.customer_case_links {
+    @include padding_two_param(1%,8%);
+
+
+    & ul {
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+
+        & li {
+           
+            @include text_style1(1.1rem,500,$paragraph_font);
+            color: $secondary_font_color;
+            border-bottom: 2px solid $secondary_font_color;
+
+            &.active {
+                color: $btn_bg_color;
+                border-bottom: 2px solid  $btn_bg_color;
+            }
+
+           & i {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
