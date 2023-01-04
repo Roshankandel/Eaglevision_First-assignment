@@ -1,0 +1,91 @@
+@import "variables";
+@import "mixin";
+
+
+.footer {
+    background-color: $secondary_font_color;
+    color: $primary_font_color;
+
+    & p {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+}
+
+.footer_item {
+    flex-grow: 1;
+
+    & h4 {
+        @include text_style1(1.3rem, 600, $Heading_font);
+        margin-bottom: 2rem;
+    }
+
+    & ul li {
+        padding-bottom: 1rem;
+        @include text_style1(1rem, 200, $paragraph_font);
+
+        & i {
+            padding-right: 1rem;
+            @include text_style1(1.2rem, 100, $paragraph_font);
+        }
+
+        & a {
+            text-decoration: none;
+            color: $primary_font_color;
+            margin-bottom: 1rem;
+            @include text_style1(1rem, 300, $paragraph_font);
+        }
+
+        & a:hover {
+            color: $btn_bg_color;
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+
+
+.footer_item ul li a {
+    text-decoration: none;
+    color: $primary_font_color;
+    margin-bottom: 1rem;
+    @include text_style1(1rem, 300, $paragraph_font);
+}
+
+.footer_item ul li a:hover {
+    color: $btn_bg_color;
+    transition: 0.2s ease-in-out;
+}
+
+.footer_container {
+    @include padding_two_param(4%, 8%);
+    gap: 4rem;
+    align-content: center;
+    margin-left: 2rem;
+    @include common_position(wrap, space-between, center);
+}
+
+
+.scrollup {
+    display: none;
+    position: fixed;
+    @include box_size(2.7rem,2.7rem);
+    background-color: $btn_bg_color;
+    color:$primary_font_color;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+
+    & a i {
+        @include flex_view;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $primary_font_color;
+      }
+      &:hover {
+        background-color: #1378d0;
+      }
+  }
+  

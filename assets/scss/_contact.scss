@@ -1,0 +1,121 @@
+@import "variables";
+@import "mixin";
+
+.contact {
+    @include padding_two_param(4rem, 2rem);
+    color: $secondary_font_color;
+    background-color: $primary_font_color;
+}
+
+.contact_container h3 {
+    @include text_style1(2.1rem, 700, $Heading_font);
+    text-align: center;
+}
+
+.contact_description {
+
+    @include text_style1(16px, $p_font_weight, $paragraph_font);
+    line-height: 1.5;
+    padding-top: 20px;
+    text-align: center;
+    @include margin_two_param(0.5rem, 15rem);
+
+    & p {
+        padding-bottom: 1.5rem;
+    }
+
+}
+
+.contact_form {
+    padding: 1rem;
+    justify-content: center;
+    display: block;
+    background-color: $secondary_font_color;
+    @include margin_two_param(1rem, 18rem);
+    color: $primary_font_color;
+
+    & p {
+        @include margin_two_param(1rem, 0rem);
+        font-size: 1.2rem;
+        color: $primary_font_color;
+        text-align: center;
+    }
+
+    & form {
+        text-align: center;
+
+        & select {
+            font-family: $paragraph_font;
+            @include input_fields(0.8rem, 5px, 30rem, 1rem);
+        }
+
+        & input:nth-child(1) {
+            @include input_fields(0.8rem, 5px, 14.89rem, 1rem);
+        }
+
+        & input:nth-child(2) {
+            margin-top: 1rem;
+            @include input_fields(0.8rem, 5px, 14.89rem, 1rem);
+        }
+
+        & textarea {
+            @include input_fields(0.8rem, 5px, 30rem, 1rem);
+            margin-top: 1rem, 0rem;
+        }
+
+        & input::placeholder {
+            color: $secondary_font_color;
+            @include text_style1(1rem, 400, $paragraph_font);
+        }
+
+        & textarea::placeholder {
+            color: $secondary_font_color;
+            @include text_style1(1rem, 400, $paragraph_font);
+        }
+
+        & input[type="checkbox"] {
+            @include box_size(15px, 15px);
+            @include margin_two_param(0px, 5px);
+        }
+
+        & label a {
+            text-decoration: none;
+            color: $primary_font_color;
+            border-bottom: 3px solid $primary_font_color;
+        }
+    }
+}
+
+.policy_container {
+    width: 100%;
+    text-align: center;
+    @include flex_view;
+}
+
+.container_inside {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.policy {
+    text-align: center;
+    @include common_position(nowrap, center, center);
+
+    & label {
+        padding-left: 8px;
+
+        & a {
+            text-decoration: none;
+            color: $primary_font_color;
+            border-bottom: 2px solid $primary_font_color;
+            cursor: pointer;
+        }
+    }
+}
+
+.form_button {
+    @include button(fit-content, fit-content, 0.7rem, 1rem, $btn_bg_color, $primary_font_color, $btn_bg_color, transparent, $btn_bg_color);
+}
+
+

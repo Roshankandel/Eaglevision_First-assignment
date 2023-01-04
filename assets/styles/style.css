@@ -659,7 +659,7 @@ section.stockholm {
   font-size: 1rem;
 } */
 /* styles for partners section */
-.partners {
+/* .partners {
   padding-top: 0.6rem;
   background-color: white;
   justify-content: center;
@@ -671,9 +671,7 @@ section.stockholm {
   align-items: center;
   align-self: center;
 }
-/* .partners_containers::-webkit-scrollbar {
-  display: none;
-} */
+
 
 .slide {
   height: 7rem;
@@ -701,13 +699,14 @@ section.stockholm {
 
 .slick-next {
   right: 5%;
-}
+} */
 /* styles for contact Section */
+
+/* 
 .contact {
   padding: 4rem 2rem;
   color: #010834;
   background-color: white;
-  /* text-align: center; */
 }
 .contact_container h3 {
   font-size: 2.1rem;
@@ -744,9 +743,7 @@ section.stockholm {
 }
 .contact_form form {
   text-align: center;
-  /* padding: 3% 10%; */
-
-  /* align-items: center; */
+ 
 }
 .contact_form form select {
   padding: 0.8rem;
@@ -838,9 +835,11 @@ section.stockholm {
   text-decoration: none;
   color: white;
   border-bottom: 3px solid white;
-}
+} */
 
 /* styles for footer section */
+
+/* 
 .footer {
   background-color: #010834;
   color: white;
@@ -862,7 +861,7 @@ section.stockholm {
   color: white;
   font-weight: 300;
   font-size: 1rem;
-  /* padding-bottom: 1rem; */
+ 
   margin-bottom: 1rem;
 }
 .footer_item ul li a:hover {
@@ -893,9 +892,10 @@ section.stockholm {
 footer p {
   text-align: center;
   padding-bottom: 2rem;
-}
+} */
+
 /* scroll to top  */
-.scrollup {
+/* .scrollup {
   display: none;
   position: fixed;
   height: 2.7rem;
@@ -917,7 +917,7 @@ footer p {
 }
 .scrollup:hover {
   background-color: #1378d0;
-}
+} */
 /* for responsiveness */
 @media (max-width: 1200px) {
   .top_info {
@@ -979,7 +979,6 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* align-content: center; */
     flex-direction: column;
     padding: 2rem 0.5rem;
     text-align: center;

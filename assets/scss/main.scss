@@ -1,31 +1,15 @@
-
+@import "globals";
 @import "variables";
 @import "nav";
 @import "services";
 @import "work";
 @import "stockholm";
 @import "customer_case";
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: #e8eef3;
-  color: var(--font-color);
-  font-family: var(--font1);
-}
+@import "partners";
+@import "contact";
+@import "footer";
 
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-.header {
-  line-height: 1.5;
-  position: relative;
-}
+
 
 
 

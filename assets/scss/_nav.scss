@@ -1,5 +1,12 @@
 
 @import "mixin";
+@import "variables";
+@import "breakpoints";
+
+.header {
+  line-height: 1.5;
+  position: relative;
+}
 section.main {
   @include box_size(90vh,100%);
   text-decoration: none;
@@ -16,12 +23,14 @@ section.main {
   @include box_size(3rem,100%);
   @include text_style($primary_font_color,1rem,100,center);
   background-color: rgba(0, 0, 0, 0.3);
+  
+ 
 }
 .phone a {
   text-decoration: none;
   display: inline-flex;
   padding-right: 3rem;
-  color: white;
+  color: $primary_font_color;
 
  &:hover {
     color: $btn_bg_color;
@@ -53,6 +62,7 @@ section.main {
    @include common_position(wrap,space-between,center);
     font-size: 1rem;
     width: 100%;
+    
   }
   .logo {
     @include common_position(nowrap,flex-start,center);
@@ -76,10 +86,18 @@ section.main {
   
   .top_info_space {
     @include padding(0,8%,0,0);
+    @include xl{
+      @include padding(0,2.5rem,0,0);
+    }
+
   }
   .nav_space {
    
     @include padding_two_param(1%,8%);
+    @include xl{
+      @include padding_two_param(0.9rem,2.5rem);
+    }
+    
   }
   
   .nav_btn {
@@ -185,8 +203,17 @@ section.main {
   .padding_header_body {
     @include padding(12%,0,0,16.5%);
   }
-  .main_heading h1 {
-    @include text_style1(3.5rem,800,$Heading_font);
+  
+    .main_heading {
+      @include xl {
+        min-width: fit-content;
+      }
+      & h1 {
+        @include text_style1(3.5rem, 800, $Heading_font);
+        @include xl {
+          font-size: 3rem;
+      }
+    }
   }
 
 

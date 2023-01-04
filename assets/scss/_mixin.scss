@@ -6,7 +6,10 @@
     justify-content: $jc;
     align-items: $ai;
 }
-
+@mixin flex_view{
+    display: flex;
+    justify-content: center;
+}
 @mixin padding($t, $r, $b, $l) {
     padding: $t $r $b $l;
 }
@@ -77,4 +80,16 @@
     display: grid;
     gap: $gap;
     grid-template-columns: $col1 $col2;
+}
+
+@mixin center{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+@mixin input_fields($padding,$border_r,$width,$font_size){
+    padding: $padding;
+    border-radius: $border_r;
+    width: $width;
+    font-size: $font_size;
 }
