@@ -3,17 +3,61 @@
 
 section.stockholm {
     background-color: #f9f9f9;
+    @include lg{
+        padding: 2rem 2rem;
+    }
+    @include md{
+        padding: 2rem 1rem;
+    }
 }
+
+
 
 .stockholm_container {
     @include grid_view(10%, 45%, 45%);
+    @include lg{
+        gap: 5%;
+        grid-template-columns: auto;
+        min-height: fit-content;
+        min-width: fit-content;
+    }
+    @include md{
+        padding: 2rem 1rem;
+    height: max-content;
+    gap: 10%;
+    }
+    @include sm{
+        padding:1rem 1rem;
+    }
+    @include xs{
+        padding: auto auto;
+    }
 }
 
-.left_banner img {
+.left_banner{
+    @include lg{
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+    }
+    @include sm{
+        padding-left: 3rem;
+    }
+    & img {
 
-    @include box_size(auto, 110%);
-
-}
+        @include box_size(auto, 110%);
+        @include lg{
+            @include box_size(auto,30rem);
+        }
+        @include md{
+            @include box_size(auto,20rem); 
+        }
+        @include xs{
+            @include box_size(auto,100%); 
+        }
+    
+    }
+} 
 
 .stockholm_title p {
     font-weight: $p_font_weight;
@@ -22,6 +66,14 @@ section.stockholm {
 .stockholm_title h4 {
     @include text_style1(2.2rem, 800, $Heading_font);
     line-height: 1.2;
+    @include md{
+        font-size: 1.8rem;
+    }
+    @include xs{
+        font-size: 1.4rem;
+    }
+
+    
 }
 
 .stockholm_intro {
@@ -32,6 +84,10 @@ section.stockholm {
     & p {
         padding-bottom: 2rem;
         line-height: 1.6;
+        @include xs{
+            font-size: 13.6px;
+            font-weight: $mb_para_size;
+        }
 
         & span a {
             text-decoration: none;
@@ -49,10 +105,19 @@ section.stockholm {
 }
 
 
-.stockholm_button a.button {
-    @include button(fit-content, 10rem, 0.6rem, 0.8rem, $btn_bg_color, $primary_font_color, $btn_bg_color, transparent, $btn_bg_color);
-    &:hover {
-        color: $btn_bg_color;
+.stockholm_button{
+    @include lg{
+        padding-bottom: 3rem;
     }
-
+    @include md{
+        padding-bottom: 5rem;
+    } 
+    & a.button {
+        @include button(fit-content, 10rem, 0.6rem, 0.8rem, $btn_bg_color, $primary_font_color, $btn_bg_color, transparent, $btn_bg_color);
+      
+        &:hover {
+            color: $btn_bg_color;
+        }
+    
+    }
 }

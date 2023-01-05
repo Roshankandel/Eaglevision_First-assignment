@@ -12,6 +12,10 @@
       @include padding_two_param(1rem,1rem);
     height: fit-content;
     background-color:$secondary_font_color;
+
+    @include md{
+      @include padding_two_param(0.5rem,0.5rem);
+    }
   }
   .slide {
     @include box_size(7rem,10rem);
@@ -25,11 +29,29 @@
     max-width: 150px;
     text-align: center;
     margin: auto;
+    @include xl{
+      width: 70%;
+      max-width: 190px;
+    }
+    @include lg{
+      width: 65%;
+    
+    }
+    @include md{
+      width: 60%;
+    
+    }
+
+
   }
   .slider_container {
     overflow: hidden;
-    padding: 1% 5%;
+  
     @include padding_two_param(1%,5%);
+
+    @include md{
+      @include padding_two_param(1%,4%);  
+    }
   }
   
   .slick-next {

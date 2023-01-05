@@ -6,22 +6,73 @@
     color: $primary_font_color;
     width: 100%;
     @include grid_view(5%,45%,45%);
+    @include lg{
+        grid-template-columns: auto;
+    }  
+    @include md{
+        gap: 0;
+    }
 }
 
 .padding_services {
     @include padding_two_param(4%, 8%);
+    @include xl{
+        @include padding_two_param(2rem,3rem);
+    }
+    @include lg{
+        @include padding_two_param(1rem,1rem); 
+    }
+    @include sm{
+        @include padding_two_param(2rem,1rem); 
+    }
+    @include xs{
+        padding: 0.2rem 0.2rem;
+    gap: 1rem;
+    }
+}
+
+.part_intro{
+  
+@include lg{
+    @include padding_two_param(2rem,1rem); 
+} 
+@include md{
+    padding-top: 3rem;
+}  
 }
 
 .services_intro_title h1 {
     @include text_style1(2.2rem, bold, $Heading_font);
+    @include xl{
+        font-size: 2rem;
+    }
+    @include lg{
+        font-size: 1.5rem;
+    }
+    @include xs{
+        font-size: 1.3rem;
+    }
+
 }
+
+
 
 .services_intro_description {
     @include text_style1(1rem, $p_font_weight, $paragraph_font);
     @include padding_two_param(2rem, 0);
     vertical-align: inherit;
     line-height: 1.6;
-
+    @include xl{
+        @include padding_two_param(1.5rem, 0);  
+    }
+    @include lg{
+        font-size: 1rem;
+    }
+& p{
+    @include xs{
+        font-size: $mb_para_size;
+    }
+}
     & span a {
         color: $primary_font_color;
         font-weight: $p_font_weight;
@@ -37,7 +88,9 @@
 
 .services_intro_button {
     margin-top: 1rem;
-
+@include md{
+    display: none;
+}
 
     .services_btn1 {
         @include button(fit-content,10rem,0.7rem,1rem, $btn_bg_color,$primary_font_color,$btn_bg_color,transparent,$btn_bg_color);
@@ -46,27 +99,91 @@
         @include button(fit-content,10rem,0.7rem,1rem,transparent,$primary_font_color,$primary_font_color,$btn_bg_color,$btn_bg_color);
     }
 }
+
+.part_services {
+    @include lg {
+        @include padding(2rem, 1rem, 4rem, 1rem);
+    }
+
+    @include xs {
+        @include padding(1rem, 5px, 2rem, 5px);
+    }
+}
 .services_item {
     text-align: center;
+    @include md{
+        display: grid;
+        grid-template-columns: 15% 80%;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
 }
 .grid_container {
     gap: 2rem;
     display: grid;
     grid-template-columns: auto auto;
     @include grid_view(2rem,auto,auto);
+    @include xl{
+       gap: 1.5rem;
+    }
+    @include md{
+        height: 100%;
+        gap: 5px;
+        grid-template-columns: auto;
+    }
 }
 .services_icon {
     text-align: center;
+    @include md{
+        width: 3rem;
+        display: flex;
+        justify-content: flex-start;
+    }
     & img {
         @include box_size(auto,4rem);
         padding-bottom: 1rem;
+        @include xs{
+            height: auto;
+            width: 3rem;
+            padding-bottom: 1rem;
+        }
     }
 }
-.services_description h3 {
+.services_description{
+@include md{
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+}
+
+& h3 {
     @include text_style1(1.1rem,bold,$Heading_font);
     @include padding_two_param(0.5rem,0);
+    @include xl{
+        font-size: 1rem;
+        @include padding_two_param(0.3rem,0);
+    }
+    @include md{
+        display: flex;
+        justify-content: flex-start;
+    }
+    @include xs{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
 }
-.services_description p {
+
+
+& p {
     font-family: var(--font1);
     font-weight: 200;
+    @include md{
+        display: flex;
+        justify-content: flex-start;
+    }
+    @include xs{
+        font-size: $mb_para_size;
+    }
+}
 }

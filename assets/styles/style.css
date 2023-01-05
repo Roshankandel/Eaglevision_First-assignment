@@ -919,6 +919,7 @@ footer p {
   background-color: #1378d0;
 } */
 /* for responsiveness */
+
 @media (max-width: 1200px) {
   .top_info {
     padding: 0 2.5rem 0 0;
@@ -933,6 +934,7 @@ footer p {
   .main_heading {
     min-width: fit-content;
   }
+
   .services_main_container {
     padding: 2rem 3rem;
   }
@@ -946,9 +948,16 @@ footer p {
     gap: 1.5rem;
   }
 
+  .service .services_description h3 {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+  }
+
   .how_we_work.common_padding {
     padding: 2rem 3rem;
   }
+
+  /* nav items media quries implemented using mixins  */
 
   .customer_case_description.common_padding {
     padding: 2rem 3rem;
@@ -956,22 +965,12 @@ footer p {
   .customer_case_links {
     padding: 1rem 3rem;
   }
-  /* stockholm */
-
-  .service .services_description h3 {
-    font-size: 1rem;
-    padding: 0.3rem 0;
-  }
-  section.how_we_work {
-    padding: 3rem 3rem;
-    color: #010834;
-    overflow: hidden;
-  }
 
   .partners_img img {
     width: 70%;
     max-width: 190px;
   }
+
   .contact {
     padding: 3rem 1rem;
   }
@@ -982,12 +981,10 @@ footer p {
     flex-direction: column;
     padding: 2rem 0.5rem;
     text-align: center;
+    margin: 1rem 2rem;
   }
   .contact_description {
     margin: 0.5rem 2rem;
-  }
-  .contact_form {
-    margin: 1rem 2rem;
   }
 
   .footer_container {
@@ -1024,6 +1021,7 @@ footer p {
     display: block;
     height: 100vh;
   }
+  /* */
   .logo {
     padding-left: 20px;
   }
@@ -1046,6 +1044,9 @@ footer p {
   .main_heading {
     font-size: 1.9rem;
   }
+
+  /* section services */
+
   .services_main_container {
     padding: 1rem 1rem;
     grid-template-columns: auto;
@@ -1065,33 +1066,28 @@ footer p {
   .services_intro_title {
     font-size: 1.5rem;
   }
+
+  /* how we works */
+
   .how_we_work.common_padding {
     padding: 2rem 1rem;
   }
-  .customer_case_grid_container {
-    padding: 1rem 2rem;
-    grid-template-columns: repeat(6, 1fr);
-    height: auto;
-    overflow: scroll;
-    width: 100%;
-  }
-  .customer_case_grid_container::-webkit-scrollbar {
-    display: none;
-  }
-  .customer_case_grid_item img {
-    width: 25rem;
-    height: 100%;
-    overflow: scroll;
-  }
 
-  section.how_we_work {
-    padding: 3rem 4rem;
-    color: #010834;
-    overflow: hidden;
-  }
   .how_we_work_title h5 {
     font-size: 1.8rem;
   }
+  .how_we_work_grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3.5rem;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  .grid_item:before {
+    width: 50px;
+  }
+
+  /* nav items media quries implemented using mixins  */
 
   .stockholm_container {
     gap: 5%;
@@ -1099,46 +1095,6 @@ footer p {
     min-height: fit-content;
     min-width: fit-content;
   }
-
-  .overlay {
-    padding: 1rem 1rem;
-  }
-  .overlay p {
-    font-size: 0.6rem;
-  }
-  .overlay span h3 {
-    font-size: 0.7rem;
-  }
-
-  .partners_img img {
-    width: 65%;
-    max-width: 190px;
-  }
-  .footer_container {
-    padding: 3rem 2rem;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .customer_case_description {
-    width: fit-content;
-  }
-  .customer_case_description.common_padding {
-    padding: 3rem 2rem 1rem 2rem;
-  }
-  .customer_case_links ul {
-    margin: auto;
-  }
-  .customer_case_links {
-    padding: 1rem 2rem;
-  }
-  .customer_case_description h3 {
-    font-size: 1.5rem;
-  }
-  .customer_case_description span a {
-    font-size: 1rem;
-  }
-
   .left_banner img {
     height: auto;
     width: 30rem;
@@ -1156,15 +1112,57 @@ footer p {
     justify-content: center;
   }
 
-  .how_we_work_grid_container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 3.5rem;
-    text-align: center;
+  /* customer case */
+
+  .customer_case_grid_container {
+    padding: 1rem 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    height: auto;
+    overflow: scroll;
+    width: 100%;
+  }
+  .customer_case_grid_container::-webkit-scrollbar {
+    display: none;
+  }
+  .customer_case_grid_item img {
+    width: 25rem;
+    height: 100%;
+    overflow: scroll;
+  }
+
+  .overlay {
+    padding: 1rem 1rem;
+  }
+  .overlay p {
+    font-size: 0.6rem;
+  }
+  .overlay span h3 {
+    font-size: 0.7rem;
+  }
+  .customer_case_description {
+    width: fit-content;
+  }
+  .customer_case_description.common_padding {
+    padding: 3rem 2rem 1rem 2rem;
+  }
+  .customer_case_links ul {
+    margin: auto;
+  }
+  .customer_case_links {
     padding: 1rem 2rem;
   }
-  .grid_item:before {
-    width: 50px;
+  .customer_case_description h3 {
+    font-size: 1.5rem;
+  }
+
+  .partners_img img {
+    width: 65%;
+    max-width: 190px;
+  }
+  .footer_container {
+    padding: 3rem 2rem;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 
@@ -1173,61 +1171,8 @@ footer p {
     display: none;
   }
 
-  .contact_form form input[type="checkbox"] {
-    height: 15px;
-    width: 15px;
-  }
-  .customer_case_description {
-    padding-left: 3rem;
-    padding-right: 1rem;
-  }
+  /* part services */
 
-  .customer_case_links ul {
-    margin: auto;
-    margin-right: 1rem;
-  }
-  .customer_case_links ul li a {
-    margin-top: 1rem;
-  }
-
-  .stockholm_title h4 {
-    font-size: 1.8rem;
-  }
-  .stockholm_container {
-    padding: 2rem 1rem;
-    height: max-content;
-    gap: 10%;
-  }
-  .left_banner img {
-    height: auto;
-    width: 20rem;
-  }
-  .stockholm_button {
-    padding-bottom: 5rem;
-  }
-
-  .how_we_work_grid_container {
-    grid-template-columns: auto auto auto auto auto;
-    gap: 2rem;
-    padding: 0 0;
-  }
-  .how_we_work.common_padding {
-    padding: 1rem 1rem;
-  }
-  section.stockholm.common_padding {
-    padding: 2rem 1rem;
-  }
-  .grid_item {
-    width: 10rem;
-  }
-  section.how_we_work {
-    padding: 1rem 1rem;
-  }
-  .grid_container {
-    height: 100%;
-    gap: 5px;
-    grid-template-columns: auto;
-  }
   .services_intro_button {
     display: none;
   }
@@ -1235,22 +1180,9 @@ footer p {
     display: grid;
     grid-template-columns: 15% 80%;
     gap: 0.5rem;
-  }
-  .services_item {
     text-align: start;
   }
 
-  .partners_img img {
-    width: 60%;
-    max-width: 190px;
-  }
-  .slider_container {
-    padding: 1% 4%;
-  }
-  .partners_containers {
-    padding: 0.5rem 0.5rem;
-  }
-  /*  */
   .services_main_container {
     gap: 0;
   }
@@ -1270,6 +1202,79 @@ footer p {
   .services_description h3 {
     display: flex;
     justify-content: flex-start;
+  }
+
+  /* how we work  */
+
+  .how_we_work_grid_container {
+    grid-template-columns: auto auto auto auto auto;
+    gap: 2rem;
+    padding: 0 0;
+  }
+  .how_we_work.common_padding {
+    padding: 1rem 1rem;
+  }
+
+  .grid_container {
+    height: 100%;
+    gap: 5px;
+    grid-template-columns: auto;
+  }
+  .grid_item {
+    width: 10rem;
+  }
+
+  /* stockholm */
+
+  .stockholm_title h4 {
+    font-size: 1.8rem;
+  }
+  .stockholm_container {
+    padding: 2rem 1rem;
+    height: max-content;
+    gap: 10%;
+  }
+  .left_banner img {
+    height: auto;
+    width: 20rem;
+  }
+  .stockholm_button {
+    padding-bottom: 5rem;
+  }
+  section.stockholm.common_padding {
+    padding: 2rem 1rem;
+  }
+
+  .customer_case_description {
+    padding-left: 3rem;
+    padding-right: 1rem;
+  }
+
+  .customer_case_links ul {
+    margin: auto;
+    margin-right: 1rem;
+  }
+  .customer_case_links ul li a {
+    margin-top: 1rem;
+  }
+
+  /* finished */
+
+  .partners_img img {
+    width: 60%;
+    max-width: 190px;
+  }
+  .slider_container {
+    padding: 1% 4%;
+  }
+  .partners_containers {
+    padding: 0.5rem 0.5rem;
+  }
+  /*  */
+
+  .contact_form form input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
   }
   .contact_form form textarea {
     width: 90%;
@@ -1294,7 +1299,6 @@ footer p {
 @media (max-width: 600px) {
   .header_body {
     margin-left: auto;
-
     text-align: center;
   }
   .main_heading h1 {
@@ -1307,6 +1311,13 @@ footer p {
   .header_btn1 {
     margin-bottom: 1rem;
   }
+
+  .services_main_container {
+    padding: 2rem 1rem;
+  }
+
+  /* applied */
+
   .customer_case_links ul {
     justify-content: flex-start;
 
@@ -1314,6 +1325,47 @@ footer p {
     margin-right: 1rem;
   }
 
+  /* stockholm */
+  .left_banner {
+    padding-left: 3rem;
+  }
+  .stockholm_container {
+    padding: 1rem 1rem;
+  }
+  .stockholm_button {
+    padding-bottom: 8rem;
+    /* align-items: center;
+    text-align: center; */
+  }
+
+  /* stockholm */
+
+  .customer_case_grid_container {
+    padding: 1rem 2rem;
+  }
+
+  .customer_case_links ul {
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-right: 5px;
+  }
+
+  .customer_case_grid_item img {
+    height: 100%;
+    width: 20rem;
+  }
+
+  .policy_container {
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .contact_description {
+    margin: auto;
+  }
   .contact_container h3 {
     font-size: 1.7rem;
   }
@@ -1336,55 +1388,8 @@ footer p {
   .contact_form form input:nth-child(1) {
     width: 90%;
   }
-
-  .services_main_container {
-    padding: 2rem 1rem;
-  }
-  /* stockholm */
-  .left_banner {
-    padding-left: 3rem;
-  }
-  .stockholm_container {
-    padding: 1rem 1rem;
-  }
-  .stockholm_title h4 {
-    font-size: 1.7rem;
-  }
-  /* stockholm */
-  .policy_container {
-    width: 90%;
-    gap: 1rem;
-  }
-
-  .contact_description {
-    margin: auto;
-  }
-  .customer_case_grid_container {
-    padding: 1rem 2rem;
-  }
-  .customer_case_grid_container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .customer_case_links ul {
-    padding-left: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-right: 5px;
-  }
-  .stockholm_button {
-    padding-bottom: 8rem;
-    align-items: center;
-    text-align: center;
-  }
-
-  .customer_case_grid_item img {
-    height: 100%;
-    width: 20rem;
-  }
 }
+
 @media (max-width: 480px) {
   .part_intro {
     padding: 2rem 5px;
@@ -1423,23 +1428,25 @@ footer p {
   .header_buttons a {
     font-size: var(--mb-para-size);
   }
-  .customer_case_description p {
-    font-size: var(--mb-para-size);
 
-    margin-left: auto;
-  }
   .info_text p {
     font-size: var(--mb-para-size);
   }
-  .services_intro_title h1 {
-    font-size: 1.3rem;
-  }
+
   .main_heading h1 {
     font-size: 1.5rem;
   }
-  .how_we_work.common_padding {
-    padding: 0.5rem 0.5rem;
+
+  /* part services */
+
+  .services_intro_title h1 {
+    font-size: 1.3rem;
   }
+
+  .services_main_container.padding_services {
+    padding: 2rem 0.5rem;
+  }
+
   .services_main_container {
     padding: 0.2rem 0.2rem;
     gap: 1rem;
@@ -1463,9 +1470,10 @@ footer p {
     font-size: var(--mb-para-size);
   }
 
-  .customer_case_grid_item img {
-    height: 100%;
-    width: 15rem;
+  /* part how we work  */
+
+  .how_we_work.common_padding {
+    padding: 0.5rem 0.5rem;
   }
   .grid_item_description {
     font-size: var(--mb-para-size);
@@ -1476,12 +1484,40 @@ footer p {
   .how_we_work_title p {
     font-size: var(--mb-para-size);
   }
+
+  /* completed */
+
+  /* stockholm */
+
+  .stockholm_title h4 {
+    font-size: 1.4rem;
+  }
+
+  /* section.stockholm.common_padding {
+    padding: 2rem 0.5rem;
+  } */
+  .stockholm_intro p {
+    font-size: 13.6px;
+    font-weight: var(--p-font-weight);
+  }
+  .stockholm_button {
+    padding-bottom: 5rem;
+  }
   .left_banner img {
     height: auto;
     width: 100%;
   }
   .stockholm_container {
     padding: auto auto;
+  }
+
+  .customer_case_description p {
+    font-size: var(--mb-para-size);
+    margin-left: auto;
+  }
+  .customer_case_grid_item img {
+    height: 100%;
+    width: 15rem;
   }
   .customer_case_grid_container {
     padding: 1rem 0.5rem;
@@ -1492,9 +1528,9 @@ footer p {
   .customer_case_description h3 {
     font-size: 1.3rem;
   }
-  .customer_case_links ul {
-    padding-left: 5px;
-  }
+
+  /* finished */
+
   .contact_container h3 {
     font-size: 1.3rem;
   }
@@ -1513,25 +1549,7 @@ footer p {
   .customer_case_links ul li {
     padding-left: auto;
   }
-  .stockholm_title h4 {
-    font-size: 1.4rem;
-  }
-  .services_main_container.padding_services {
-    padding: 2rem 0.5rem;
-  }
-  .stockholm_container {
-    padding: 0 0.5rem;
-  }
-  section.stockholm.common_padding {
-    padding: 2rem 0.5rem;
-  }
-  .stockholm_intro p {
-    font-size: 13.6px;
-    font-weight: var(--p-font-weight);
-  }
-  .stockholm_button {
-    padding-bottom: 5rem;
-  }
+
   .contact_form p {
     font-size: var(--mb-para-size);
   }

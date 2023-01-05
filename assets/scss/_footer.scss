@@ -62,7 +62,7 @@
     gap: 4rem;
     align-content: center;
     margin-left: 2rem;
-    @include common_position(wrap, space-between, center);
+    @include common_position(wrap, space-between,none);
 }
 
 

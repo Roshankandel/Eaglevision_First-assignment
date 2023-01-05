@@ -5,6 +5,10 @@
     @include padding_two_param(4rem, 2rem);
     color: $secondary_font_color;
     background-color: $primary_font_color;
+
+    @include xl {
+        @include padding_two_param(3rem, 1rem);
+    }
 }
 
 .contact_container h3 {
@@ -20,10 +24,17 @@
     text-align: center;
     @include margin_two_param(0.5rem, 15rem);
 
+    @include xl {
+        margin: 0.5rem 2rem;
+    }
+
     & p {
         padding-bottom: 1.5rem;
     }
 
+    @include xl {
+        @include margin_two_param(0.5rem, 2rem);
+    }
 }
 
 .contact_form {
@@ -33,6 +44,23 @@
     background-color: $secondary_font_color;
     @include margin_two_param(1rem, 18rem);
     color: $primary_font_color;
+
+    @include xl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 0.5rem;
+        text-align: center;
+        margin: 1rem 2rem;
+    }
+
+    @include md {
+        margin: 1rem 1rem;
+    }
+    @include md {
+        margin: auto;
+    }
 
     & p {
         @include margin_two_param(1rem, 0rem);
@@ -47,10 +75,18 @@
         & select {
             font-family: $paragraph_font;
             @include input_fields(0.8rem, 5px, 30rem, 1rem);
+
+            @include md {
+                width: 90%;
+            }
         }
 
         & input:nth-child(1) {
             @include input_fields(0.8rem, 5px, 14.89rem, 1rem);
+
+            @include md {
+                width: 90%;
+            }
         }
 
         & input:nth-child(2) {
@@ -61,6 +97,11 @@
         & textarea {
             @include input_fields(0.8rem, 5px, 30rem, 1rem);
             margin-top: 1rem, 0rem;
+
+            @include md {
+                width: 90%;
+            }
+
         }
 
         & input::placeholder {
@@ -76,6 +117,10 @@
         & input[type="checkbox"] {
             @include box_size(15px, 15px);
             @include margin_two_param(0px, 5px);
+
+            @include md {
+                @include box_size(15px, 15px);
+            }
         }
 
         & label a {
@@ -96,6 +141,10 @@
     width: 30rem;
     display: flex;
     justify-content: space-between;
+
+    @include md {
+        width: 26rem;
+    }
 }
 
 .policy {
@@ -117,5 +166,3 @@
 .form_button {
     @include button(fit-content, fit-content, 0.7rem, 1rem, $btn_bg_color, $primary_font_color, $btn_bg_color, transparent, $btn_bg_color);
 }
-
-

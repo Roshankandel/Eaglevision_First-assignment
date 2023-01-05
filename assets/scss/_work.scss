@@ -5,27 +5,67 @@
 .common_padding {
    
     @include padding_two_param(4%,8%);
+    @include xl{
+      padding: 2rem 3rem;
+    }
+    @include lg{
+      padding: 2rem 1rem;
+    }
+    @include  md{
+      padding:1rem 1rem;
+    }
+    @include xs{
+      padding: 0.5rem 0.5rem;
+    }
   }
   section.how_we_work {
     background-color: $primary_font_color;
     color:$secondary_font_color;
     overflow: auto;
+    @include xl{
+      overflow: hidden;
+    }
   }
-  
   .how_we_work_title {
     padding-top: 2rem;
-    @include text_style( $secondary_font_color,1rem,400,center);
+    @include text_style($secondary_font_color,1rem,400,center);
+
+   & h5 {
+      @include text_style1(2.3rem,700,$Heading_font);
+      margin-top: 0.8rem;
+      @include lg{
+        font-size:1.8rem;
+      }
+      @include xs{
+        font-size: 1.3rem;
+      }
+    }
+    & p{
+      @include xs{
+        font-size:$mb_para_size;
+      }
+    }
   }
-  .how_we_work_title h5 {
-    @include text_style1(2.3rem,700,$Heading_font);
-    margin-top: 0.8rem;
-  }
+  
+
   .how_we_work_grid_container {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     gap: 2rem;
     text-align: center;
     overflow: scroll;
+    @include lg{
+      display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3.5rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    }
+    @include md{
+      grid-template-columns: auto auto auto auto auto;
+      gap: 2rem;
+      padding: 0 0;
+    }
   }
   .how_we_work_grid_container::-webkit-scrollbar {
     display: none;
@@ -33,7 +73,9 @@
   
   .grid_item {
     position: relative;
-
+@include md{
+  width:10rem;
+  }
     & img {
       margin-top: 3.5rem;
       @include box_size(7rem,7rem);
@@ -47,6 +89,9 @@
       top: 7rem;
       transform: translate(64%);
       right: 0rem;
+      @include lg{
+        width: 50px;
+      }
     }
     &:nth-child(5)::before {
       display: none;
@@ -62,4 +107,7 @@
     line-height: 1.6;
     font-weight: 300;
     font-family: $paragraph_font;
+    @include xs{
+      font-size: $mb_para_size;
+    }
   }
