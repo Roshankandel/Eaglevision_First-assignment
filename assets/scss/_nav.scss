@@ -309,6 +309,9 @@ section.main {
 
 .padding_header_body {
   @include padding(12%, 0, 0, 16.5%);
+  @include sm{
+    padding: 12%;
+  }
 }
 
 .main_heading {
@@ -372,9 +375,10 @@ section.main {
 
 .header_btn1 {
   @include button(fit-content, 10rem, 0.7rem, 1rem, $btn_bg_color, $primary_font_color, $btn_bg_color, transparent, $btn_bg_color);
-
+  margin-right: 1rem;
   @include sm {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
   }
 }
 

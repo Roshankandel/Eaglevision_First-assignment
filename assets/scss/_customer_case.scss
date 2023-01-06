@@ -71,9 +71,10 @@ section.customer_case {
     width: 100%;
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: 32.7% 32.7% 32.7%;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-template-columns: 33% 33% 33%;
+    grid-row-gap: 1%;
+    grid-column-gap: 0.5%;
+    
 
     @include lg {
         padding: 1rem 2rem;
@@ -100,12 +101,13 @@ section.customer_case {
 }
 
 .customer_case_grid_item {
-    @include box_size(auto, 100%);
+    @include box_size(100%, 100%);
     background-color: #010834;
     position: relative;
 
     & img {
         @include box_size(100%, 100%);
+        
 
         @include lg {
             @include box_size(100%, 25rem);

@@ -13,7 +13,7 @@
   --mb-para-size: 0.85rem;
   --p-font-weight: 300;
 }
-/* body {
+body {
   background-color: #e8eef3;
   color: var(--font-color);
   font-family: var(--font1);
@@ -25,7 +25,6 @@ ul {
 a {
   text-decoration: none;
 }
-
 
 .header {
   line-height: 1.5;
@@ -72,7 +71,6 @@ a {
 }
 
 .nav_btn {
- 
   background-color: #0074da;
   padding: 0.5rem 1rem;
   color: white;
@@ -105,8 +103,6 @@ a {
 .nav ul li a:hover {
   color: #0074da;
 }
-
-
 
 .nav-toggler {
   color: black;
@@ -180,11 +176,9 @@ a {
   position: fixed;
   z-index: 1;
   overflow: hidden;
-} */
+}
 
-/* changed by roshan */
-
-/* section.main {
+section.main {
   text-decoration: none;
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)),
     url("../images/background2.jfif");
@@ -235,9 +229,9 @@ a {
   display: flex;
   align-items: center;
   padding-right: 10px;
-} */
+}
 
-/* .header_body {
+.header_body {
   color: white;
   max-width: max-content;
   display: block;
@@ -305,10 +299,10 @@ a {
 .arrow-down a {
   color: white;
   font-size: 2rem;
-} */
+}
 
 /* Styles for section services */
-/* 
+
 .services_main_container {
   min-height: fit-content;
   background-color: #010834;
@@ -403,11 +397,10 @@ a {
 .services_description p {
   font-family: var(--font1);
   font-weight: 200;
-} */
+}
 
 /* styles for how do we work section */
 
-/* 
 .common_padding {
   padding: 4% 8%;
 }
@@ -471,10 +464,10 @@ section.how_we_work {
   line-height: 1.6;
   font-weight: 300;
   font-family: var(--font1);
-} */
+}
 
 /* styles for stockholm section */
-/* 
+
 section.stockholm {
   background-color: #f9f9f9;
 }
@@ -537,11 +530,11 @@ section.stockholm {
   border: 1px solid var(--primary-color);
   color: var(--primary-color) !important;
   transition: 0.3s;
-} */
+}
 
 /* Styles for customer case */
 
-/* section.customer_case {
+section.customer_case {
   background-color: rgb(255, 255, 255);
 }
 .customer_case_description.common_padding {
@@ -657,9 +650,9 @@ section.stockholm {
 
 .customer_case_links ul li i {
   font-size: 1rem;
-} */
+}
 /* styles for partners section */
-/* .partners {
+.partners {
   padding-top: 0.6rem;
   background-color: white;
   justify-content: center;
@@ -671,7 +664,6 @@ section.stockholm {
   align-items: center;
   align-self: center;
 }
-
 
 .slide {
   height: 7rem;
@@ -699,10 +691,9 @@ section.stockholm {
 
 .slick-next {
   right: 5%;
-} */
+}
 /* styles for contact Section */
 
-/* 
 .contact {
   padding: 4rem 2rem;
   color: #010834;
@@ -743,7 +734,6 @@ section.stockholm {
 }
 .contact_form form {
   text-align: center;
- 
 }
 .contact_form form select {
   padding: 0.8rem;
@@ -835,11 +825,10 @@ section.stockholm {
   text-decoration: none;
   color: white;
   border-bottom: 3px solid white;
-} */
+}
 
 /* styles for footer section */
 
-/* 
 .footer {
   background-color: #010834;
   color: white;
@@ -861,7 +850,7 @@ section.stockholm {
   color: white;
   font-weight: 300;
   font-size: 1rem;
- 
+
   margin-bottom: 1rem;
 }
 .footer_item ul li a:hover {
@@ -892,10 +881,10 @@ section.stockholm {
 footer p {
   text-align: center;
   padding-bottom: 2rem;
-} */
+}
 
 /* scroll to top  */
-/* .scrollup {
+.scrollup {
   display: none;
   position: fixed;
   height: 2.7rem;
@@ -917,7 +906,8 @@ footer p {
 }
 .scrollup:hover {
   background-color: #1378d0;
-} */
+}
+
 /* for responsiveness */
 
 @media (max-width: 1200px) {
@@ -956,8 +946,6 @@ footer p {
   .how_we_work.common_padding {
     padding: 2rem 3rem;
   }
-
-  /* nav items media quries implemented using mixins  */
 
   .customer_case_description.common_padding {
     padding: 2rem 3rem;
@@ -1086,8 +1074,6 @@ footer p {
   .grid_item:before {
     width: 50px;
   }
-
-  /* nav items media quries implemented using mixins  */
 
   .stockholm_container {
     gap: 5%;
@@ -1334,8 +1320,6 @@ footer p {
   }
   .stockholm_button {
     padding-bottom: 8rem;
-    /* align-items: center;
-    text-align: center; */
   }
 
   /* stockholm */
@@ -1485,17 +1469,12 @@ footer p {
     font-size: var(--mb-para-size);
   }
 
-  /* completed */
-
   /* stockholm */
 
   .stockholm_title h4 {
     font-size: 1.4rem;
   }
 
-  /* section.stockholm.common_padding {
-    padding: 2rem 0.5rem;
-  } */
   .stockholm_intro p {
     font-size: 13.6px;
     font-weight: var(--p-font-weight);
@@ -1531,6 +1510,13 @@ footer p {
 
   /* finished */
 
+  .customer_case_links ul {
+    margin-left: auto;
+  }
+  .customer_case_links ul li {
+    padding-left: auto;
+  }
+
   .contact_container h3 {
     font-size: 1.3rem;
   }
@@ -1543,13 +1529,6 @@ footer p {
     font-size: var(--mb-para-size);
     font-weight: var(--mb-para-size);
   }
-  .customer_case_links ul {
-    margin-left: auto;
-  }
-  .customer_case_links ul li {
-    padding-left: auto;
-  }
-
   .contact_form p {
     font-size: var(--mb-para-size);
   }

@@ -2,6 +2,7 @@
 @import "variables";
 
 section.stockholm {
+    padding: 8% 8%;
     background-color: #f9f9f9;
     @include lg{
         padding: 2rem 2rem;
